@@ -1,31 +1,32 @@
 @import url('colors_and_type.css');
 
 :root {
-  --bg: #0B0B14;
-  --bg-2: #12121F;
-  --bg-3: #1A1A2E;
-  --ink: #FFFFFF;
-  --ink-2: rgba(255,255,255,0.72);
-  --ink-3: rgba(255,255,255,0.48);
-  --ink-4: rgba(255,255,255,0.28);
-  --rule: rgba(255,255,255,0.10);
-  --accent: #B285EA;   /* violet-light-45 — softer for dark bg */
-  --accent-2: #9C5CE3; /* violet-light-30 */
-  --accent-hot: #7622d7;
-  --warn: #FE7A59;
+  --bg:         #0B0B14;
+  --bg-2:       #12121F;
+  --bg-3:       #1A1A2E;
+  --ink:        var(--wp--preset--color--white);
+  --ink-2:      rgba(255,255,255,0.72);
+  --ink-3:      rgba(255,255,255,0.48);
+  --ink-4:      rgba(255,255,255,0.28);
+  --rule:       rgba(255,255,255,0.10);
+  --accent:     var(--wp--preset--color--light-violet-400);
+  --accent-2:   var(--wp--preset--color--light-violet-500);
+  --accent-hot: var(--wp--preset--color--violet-500);
+  --warn:       var(--wp--preset--color--orange-600);
+  --neon:       var(--wp--preset--color--neon-green-400);
 }
 
 html, body {
   background: #000;
   color: var(--ink);
-  font-family: 'BeVietnamPro', -apple-system, system-ui, sans-serif;
-  font-feature-settings: "kern", "liga", "ss01";
+  font-family: var(--wp--preset--font-family--default);
+  font-feature-settings: "kern", "liga";
 }
 
 deck-stage > section {
   background: var(--bg);
   color: var(--ink);
-  font-family: 'BeVietnamPro', system-ui, sans-serif;
+  font-family: var(--wp--preset--font-family--default);
   font-weight: 300;
   letter-spacing: -0.005em;
   position: relative;

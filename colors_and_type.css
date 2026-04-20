@@ -1,0 +1,173 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   Employment Hero — Design Tokens + Typography
+   Generated from EH brand guidelines.
+   NOTE: Saiga font files must be placed alongside this file as:
+         saiga-regular.woff2, saiga-medium.woff2, saiga-semibold.woff2
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* ── Fonts ──────────────────────────────────────────────────────────────────── */
+
+/* Saiga — EH brand heading font. Provide .woff2 files to activate. */
+@font-face {
+  font-family: 'Saiga';
+  src: url('saiga-regular.woff2') format('woff2');
+  font-weight: 300 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Saiga';
+  src: url('saiga-medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Saiga';
+  src: url('saiga-semibold.woff2') format('woff2');
+  font-weight: 600 700;
+  font-display: swap;
+}
+
+/* DM Sans — EH body/UI font (Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&display=swap');
+
+/* ── CSS Custom Properties ───────────────────────────────────────────────────── */
+
+:root {
+
+  /* Font families */
+  --wp--preset--font-family--heading: 'Saiga', Georgia, serif;
+  --wp--preset--font-family--default: 'DM Sans', -apple-system, system-ui, sans-serif;
+
+  /* ── Colour Palette ── */
+
+  /* Core */
+  --wp--preset--color--black:      #000000;
+  --wp--preset--color--white:      #FFFFFF;
+  --wp--preset--color--off-black:  #121214;
+  --wp--preset--color--off-white:  #FCFBFF;
+  --wp--preset--color--dark-grey:  #545454;
+
+  /* Neutral */
+  --wp--preset--color--neutral-800: #27272A;
+  --wp--preset--color--neutral-700: #3F3F46;
+  --wp--preset--color--neutral-500: #71717A;
+  --wp--preset--color--neutral-400: #A9A9B2;
+  --wp--preset--color--neutral-200: #E4E4E7;
+  --wp--preset--color--neutral-100: #F4F4F5;
+
+  /* Violet — brand primary */
+  --wp--preset--color--dark-violet:       #280541;
+  --wp--preset--color--deep-violet:       #460078;
+  --wp--preset--color--violet-500:        #7622D7;
+  --wp--preset--color--primary-violet:    #A569FF;
+  --wp--preset--color--violet-400:        #BB91EB;
+  --wp--preset--color--light-violet-500:  #9A58FC;
+  --wp--preset--color--light-violet-450:  #A669F8;
+  --wp--preset--color--light-violet-400:  #B382FD;
+  --wp--preset--color--light-violet-300:  #CDACFE;
+  --wp--preset--color--light-violet-200:  #E6D5FE;
+  --wp--preset--color--light-violet-50:   #F9F5FF;
+  --wp--preset--color--light-violet-10:   #F2E9FB;
+
+  /* Neon Green — accent */
+  --wp--preset--color--neon-green-800: #4F8203;
+  --wp--preset--color--neon-green-700: #67AA03;
+  --wp--preset--color--neon-green-500: #94E022;
+  --wp--preset--color--neon-green-400: #BAFC58;
+  --wp--preset--color--neon-green-200: #DDFEAC;
+  --wp--preset--color--neon-green-100: #EEFED5;
+
+  /* Sky Blue */
+  --wp--preset--color--sky-600: #0098C7;
+  --wp--preset--color--sky-500: #00B4EB;
+  --wp--preset--color--sky-400: #40D1FF;
+  --wp--preset--color--sky-300: #70DDFF;
+  --wp--preset--color--sky-200: #A0E8FF;
+  --wp--preset--color--sky-100: #CFF4FF;
+
+  /* Orange */
+  --wp--preset--color--orange-700: #DC6204;
+  --wp--preset--color--orange-600: #F67A0E;
+  --wp--preset--color--orange-500: #FFA000;
+  --wp--preset--color--orange-300: #FFD080;
+  --wp--preset--color--orange-200: #FFE7BF;
+  --wp--preset--color--orange-100: #FFF0D5;
+
+  /* Semantic — Error */
+  --wp--preset--color--error-700: #BD2D09;
+  --wp--preset--color--error-600: #DE350B;
+  --wp--preset--color--error-500: #EB5537;
+  --wp--preset--color--error-400: #F88371;
+  --wp--preset--color--error-100: #FEE5E2;
+
+  /* Semantic — Success */
+  --wp--preset--color--success-700: #017D6D;
+  --wp--preset--color--success-600: #019788;
+  --wp--preset--color--success-500: #01B39C;
+  --wp--preset--color--success-400: #49D0BF;
+  --wp--preset--color--success-100: #D1FAF5;
+
+  /* ── Gradients ── */
+  --wp--preset--gradient--dark-violet-to-off-black:
+    radial-gradient(ellipse at top left, var(--wp--preset--color--dark-violet) 0%, var(--wp--preset--color--off-black) 70%);
+  --wp--preset--gradient--dark-violet-to-off-black-h:
+    linear-gradient(90deg, var(--wp--preset--color--dark-violet) 0%, var(--wp--preset--color--off-black) 100%);
+  --wp--preset--gradient--white-to-lv-50:
+    linear-gradient(180deg, #FFFFFF 0%, var(--wp--preset--color--light-violet-50) 100%);
+  --wp--preset--gradient--white-to-lv-200:
+    linear-gradient(180deg, #FFFFFF 0%, var(--wp--preset--color--light-violet-200) 100%);
+  --wp--preset--gradient--white-to-lv-300:
+    linear-gradient(180deg, #FFFFFF 0%, var(--wp--preset--color--light-violet-300) 100%);
+  --wp--preset--gradient--lv-200-to-lv-500:
+    linear-gradient(135deg, var(--wp--preset--color--light-violet-200) 0%, var(--wp--preset--color--light-violet-500) 100%);
+  --wp--preset--gradient--ai-gradient:
+    linear-gradient(135deg, var(--wp--preset--color--violet-500) 0%, var(--wp--preset--color--sky-400) 50%, var(--wp--preset--color--neon-green-400) 100%);
+  --wp--preset--gradient--green-to-dark-green:
+    linear-gradient(135deg, var(--wp--preset--color--neon-green-400) 0%, var(--wp--preset--color--neon-green-800) 100%);
+  --wp--preset--gradient--off-white-to-white:
+    linear-gradient(180deg, var(--wp--preset--color--off-white) 0%, #FFFFFF 100%);
+
+  /* ── Font Sizes ── */
+  --wp--preset--font-size--xs:   0.75rem;    /* 12px */
+  --wp--preset--font-size--sm:   0.875rem;   /* 14px */
+  --wp--preset--font-size--md:   1rem;       /* 16px */
+  --wp--preset--font-size--lg:   1.125rem;   /* 18px */
+  --wp--preset--font-size--xl:   1.5rem;     /* 24px */
+  --wp--preset--font-size--2-xl: 1.75rem;    /* 28px */
+  --wp--preset--font-size--3-xl: 2.25rem;    /* 36px */
+  --wp--preset--font-size--4-xl: 2.625rem;   /* 42px */
+  --wp--preset--font-size--5-xl: 2.75rem;    /* 44px */
+  --wp--preset--font-size--6-xl: 4rem;       /* 64px */
+
+  --wp--preset--font-size--paragraph-1-l:   clamp(1.125rem, 1.5vw, 1.5rem);
+  --wp--preset--font-size--paragraph-2-m:   clamp(1rem, 1.2vw, 1.125rem);
+  --wp--preset--font-size--paragraph-3-s:   clamp(0.875rem, 1vw, 1rem);
+  --wp--preset--font-size--paragraph-4-xs:  0.875rem;
+  --wp--preset--font-size--paragraph-5-xxs: 0.75rem;
+
+  --wp--preset--font-size--heading-1-4xl: clamp(2.5rem, 5vw, 5rem);
+  --wp--preset--font-size--heading-1-3xl: clamp(2.5rem, 4vw, 4rem);
+  --wp--preset--font-size--heading-2-2xl: clamp(2rem, 3.75vw, 3.75rem);
+  --wp--preset--font-size--heading-2-xl:  clamp(2rem, 2.625vw, 2.625rem);
+  --wp--preset--font-size--heading-3-l:   clamp(1.5rem, 1.75vw, 1.75rem);
+  --wp--preset--font-size--heading-4-m:   clamp(1.125rem, 1.5vw, 1.5rem);
+  --wp--preset--font-size--heading-5-s:   1.125rem;
+
+  /* ── Spacing ── */
+  --wp--preset--spacing--1:  0.25rem;   /* 4px */
+  --wp--preset--spacing--2:  0.5rem;    /* 8px */
+  --wp--preset--spacing--3:  0.75rem;   /* 12px */
+  --wp--preset--spacing--4:  1rem;      /* 16px */
+  --wp--preset--spacing--5:  1.25rem;   /* 20px */
+  --wp--preset--spacing--6:  1.5rem;    /* 24px */
+  --wp--preset--spacing--8:  2rem;      /* 32px */
+  --wp--preset--spacing--10: 2.5rem;    /* 40px */
+  --wp--preset--spacing--12: 3rem;      /* 48px */
+  --wp--preset--spacing--16: 4rem;      /* 64px */
+  --wp--preset--spacing--20: 5rem;      /* 80px */
+  --wp--preset--spacing--24: 6rem;      /* 96px */
+  --wp--preset--spacing--32: 8rem;      /* 128px */
+  --wp--preset--spacing--40: 10rem;     /* 160px */
+  --wp--preset--spacing--48: 12rem;     /* 192px */
+  --wp--preset--spacing--64: 16rem;     /* 256px */
+}
