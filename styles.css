@@ -1,0 +1,336 @@
+@import url('colors_and_type.css');
+
+:root {
+  --bg: #0B0B14;
+  --bg-2: #12121F;
+  --bg-3: #1A1A2E;
+  --ink: #FFFFFF;
+  --ink-2: rgba(255,255,255,0.72);
+  --ink-3: rgba(255,255,255,0.48);
+  --ink-4: rgba(255,255,255,0.28);
+  --rule: rgba(255,255,255,0.10);
+  --accent: #B285EA;   /* violet-light-45 — softer for dark bg */
+  --accent-2: #9C5CE3; /* violet-light-30 */
+  --accent-hot: #7622d7;
+  --warn: #FE7A59;
+}
+
+html, body {
+  background: #000;
+  color: var(--ink);
+  font-family: 'BeVietnamPro', -apple-system, system-ui, sans-serif;
+  font-feature-settings: "kern", "liga", "ss01";
+}
+
+deck-stage > section {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'BeVietnamPro', system-ui, sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.005em;
+  position: relative;
+}
+
+/* Chrome — every slide */
+.chrome {
+  position: absolute;
+  left: 80px; right: 80px;
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--ink-3);
+  pointer-events: none;
+  z-index: 3;
+}
+.chrome.top { top: 56px; }
+.chrome.bot { bottom: 56px; }
+.chrome .mono {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+}
+.chrome .sep {
+  display: inline-block;
+  width: 6px; height: 6px; border-radius: 999px;
+  background: var(--accent);
+  margin: 0 14px;
+  vertical-align: middle;
+}
+
+/* EH wordmark (drawn as text using bold Be Vietnam) */
+.eh-mark {
+  display: inline-flex; align-items: center; gap: 12px;
+  color: var(--ink-2);
+}
+.eh-mark .glyph {
+  display: inline-block;
+  width: 26px; height: 26px;
+  border-radius: 999px;
+  background: var(--ink);
+  position: relative;
+}
+.eh-mark .glyph::before, .eh-mark .glyph::after{
+  content:"";
+  position: absolute;
+  top: 50%; transform: translateY(-50%);
+  width: 8px; height: 14px;
+  background: var(--bg);
+  border-radius: 999px;
+}
+.eh-mark .glyph::before{ left: 4px; }
+.eh-mark .glyph::after{ right: 4px; }
+.eh-mark .wm {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink-2);
+  font-size: 20px;
+}
+
+/* Optimizely wordmark, drawn */
+.opti-mark {
+  display: inline-flex; align-items: center; gap: 10px;
+  color: var(--ink-2);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -0.005em;
+}
+.opti-mark .dot {
+  width: 18px; height: 18px; border-radius: 999px;
+  background: linear-gradient(135deg, #0037FF 0%, #861DFF 100%);
+  display: inline-block;
+}
+
+/* Eyebrow / kicker */
+.kicker {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* Display type — we use Saiga light at display sizes for oversized moments */
+.display {
+  font-family: 'Saiga', 'BeVietnamPro', serif;
+  font-weight: 300;
+  letter-spacing: -0.025em;
+  line-height: 0.98;
+}
+
+/* Subtle grid backdrop (for architecture / dashboard slides) */
+.grid-bg::before {
+  content:"";
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 85%);
+  pointer-events: none;
+}
+
+/* Orbital motif — decorative rings */
+.orbit-bg {
+  position: absolute; inset: 0; overflow: hidden; pointer-events: none;
+}
+.orbit-bg .ring {
+  position: absolute; border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.orbit-bg .dot {
+  position: absolute; border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 30px rgba(178,133,234,0.6);
+}
+
+/* Reusable cards */
+.card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--rule);
+  border-radius: 16px;
+  padding: 40px;
+}
+
+/* Numbered list for principles */
+.principle-row {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 40px;
+  padding: 40px 0;
+  border-top: 1px solid var(--rule);
+  align-items: baseline;
+}
+.principle-row:last-child { border-bottom: 1px solid var(--rule); }
+.principle-row .num {
+  font-family: 'Saiga', serif;
+  font-weight: 300;
+  font-size: 64px;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.principle-row .title {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  margin-bottom: 14px;
+}
+.principle-row .sub {
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--ink-2);
+  line-height: 1.35;
+}
+
+/* Node (architecture) */
+.node {
+  background: #15152a;
+  border: 1px solid rgba(178,133,234,0.18);
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--ink);
+  display: inline-flex; align-items: center; gap: 10px;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.3);
+}
+.node .tag-dot { width: 8px; height: 8px; border-radius: 999px; background: var(--accent); }
+
+/* Pill */
+.pill {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(178,133,234,0.12);
+  border: 1px solid rgba(178,133,234,0.35);
+  font-size: 20px;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+/* Utility text */
+.body-lg { font-size: 32px; line-height: 1.35; font-weight: 300; color: var(--ink-2); }
+.body-md { font-size: 26px; line-height: 1.4; font-weight: 300; color: var(--ink-2); }
+
+/* Streaming cursor */
+.cursor {
+  display: inline-block;
+  width: 0.55ch; height: 1em;
+  background: var(--accent);
+  vertical-align: -0.12em;
+  margin-left: 4px;
+  animation: blink 1s steps(2) infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+/* ───────────────────────── ANIMATION SYSTEM ───────────────────────── */
+
+/* Entrance primitives — only run on the ACTIVE slide. */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes slam {
+  0%   { opacity: 0; transform: scale(1.15); }
+  60%  { opacity: 1; transform: scale(0.98); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes growUp {
+  from { transform: scaleY(0); }
+  to   { transform: scaleY(1); }
+}
+@keyframes drawIn {
+  from { stroke-dashoffset: var(--len, 600); }
+  to   { stroke-dashoffset: 0; }
+}
+@keyframes flowDash { to { stroke-dashoffset: -200; } }
+@keyframes pulseGlow {
+  0%,100% { filter: drop-shadow(0 0 16px rgba(156,92,227,0.45)); }
+  50%     { filter: drop-shadow(0 0 36px rgba(156,92,227,0.85)); }
+}
+@keyframes floatY {
+  0%,100% { transform: translateY(0); }
+  50%     { transform: translateY(-12px); }
+}
+@keyframes pulseDot {
+  0%,100% { opacity: 0.4; }
+  50%     { opacity: 0.9; }
+}
+@keyframes spin  { to { transform: rotate(360deg); } }
+@keyframes spinR { to { transform: rotate(-360deg); } }
+@keyframes ringExpand {
+  from { transform: translate(-50%, -50%) scale(0.85); opacity: 0.15; }
+  to   { transform: translate(-50%, -50%) scale(1.15); opacity: 0.05; }
+}
+@keyframes shimmer {
+  0%,100% { opacity: 1; }
+  50%     { opacity: 0.7; text-shadow: 0 0 20px var(--accent); }
+}
+
+/* Only animate when slide is active. deck-stage sets data-deck-active on active slide. */
+deck-stage > section[data-deck-active] .anim-kicker   { animation: fadeIn 0.45s ease-out both; }
+deck-stage > section[data-deck-active] .anim-headline { animation: fadeUp 0.7s 0.15s cubic-bezier(.2,.7,.2,1) both; }
+deck-stage > section[data-deck-active] .anim-body     { animation: fadeUp 0.55s 0.35s cubic-bezier(.2,.7,.2,1) both; }
+deck-stage > section[data-deck-active] .anim-card     { animation: scaleIn 0.55s ease-out both; }
+deck-stage > section[data-deck-active] .anim-slam     { animation: slam 0.55s cubic-bezier(.2,.9,.3,1.1) both; }
+deck-stage > section[data-deck-active] .anim-bar      { animation: growUp 0.6s ease-out both; transform-origin: bottom; }
+deck-stage > section[data-deck-active] .anim-grow     { animation: fadeIn 0.4s both; }
+deck-stage > section[data-deck-active] .anim-fade     { animation: fadeIn 0.6s both; }
+deck-stage > section[data-deck-active] .anim-drop     { animation: fadeUp 0.55s cubic-bezier(.2,.8,.2,1.1) both; }
+
+/* Stagger helpers */
+.s1 { animation-delay: 0.10s !important; }
+.s2 { animation-delay: 0.25s !important; }
+.s3 { animation-delay: 0.40s !important; }
+.s4 { animation-delay: 0.55s !important; }
+.s5 { animation-delay: 0.70s !important; }
+.s6 { animation-delay: 0.85s !important; }
+.s7 { animation-delay: 1.00s !important; }
+.s8 { animation-delay: 1.15s !important; }
+.s9 { animation-delay: 1.30s !important; }
+.s10 { animation-delay: 1.45s !important; }
+.s11 { animation-delay: 1.60s !important; }
+.s12 { animation-delay: 1.75s !important; }
+
+/* Ambient orbital — runs continuously on active slide */
+deck-stage > section[data-deck-active] .orbit-bg .ring { animation: spin 120s linear infinite; transform-origin: center; }
+deck-stage > section[data-deck-active] .orbit-bg .ring:nth-child(2) { animation: spinR 180s linear infinite; }
+deck-stage > section[data-deck-active] .orbit-bg .ring:nth-child(3) { animation: spin 240s linear infinite; }
+deck-stage > section[data-deck-active] .orbit-bg .dot { animation: pulseDot 5s ease-in-out infinite, floatY 7s ease-in-out infinite; }
+
+/* Hub glyph — rotating rings */
+.hub-spin-a { animation: spin 24s linear infinite; transform-origin: center; transform-box: fill-box; }
+.hub-spin-b { animation: spinR 36s linear infinite; transform-origin: center; transform-box: fill-box; }
+.hub-glow   { animation: pulseGlow 3s ease-in-out infinite; }
+
+/* Flow dots along connector wires (Architecture slide) */
+.flow-wire { stroke-dasharray: 6 14; animation: flowDash 3.5s linear infinite; }
+.flow-wire.fast { animation-duration: 2s; stroke-width: 2.5; }
+
+/* Card/tile entrance — apply .anim-card + .s1..s4 */
+/* Typewriter line — used on Slide 7 principle rows */
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid transparent;
+  animation: typeReveal 1.6s steps(40, end) both;
+}
+@keyframes typeReveal { from { width: 0; } to { width: 100%; } }
+
+/* Count-up: we use JS to set text, but wrap provides the settle glow */
+.countup { display: inline-block; }
+.countup.landed { animation: shimmer 1.2s ease-out; }
+
+/* Velocity chart — bar grow delays */
+.vbar { transform-origin: bottom; transform-box: fill-box; }
+deck-stage > section[data-deck-active] .vbar { animation: growUp 0.55s cubic-bezier(.2,.8,.2,1) both; }
+
+/* Disable animations entirely when user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
