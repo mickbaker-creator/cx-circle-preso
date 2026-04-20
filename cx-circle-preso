@@ -1,0 +1,1257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>From Test Paralysis to 20+ Tests a Month — Mick Baker, CX Circle Sydney</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="styles.css" />
+<script src="deck-stage.js"></script>
+</head>
+<body>
+
+<deck-stage width="1920" height="1080">
+
+<!-- ────────────────────────────────────────────────────────────────
+     SLIDE 1 · Title
+     ──────────────────────────────────────────────────────────────── -->
+<section data-label="Title" style="background: #0B0B14;">
+  <!-- orbital motif -->
+  <div class="orbit-bg" aria-hidden="true">
+    <div class="ring" style="width: 1400px; height: 1400px; left: 50%; top: 50%; transform: translate(-50%, -50%); border-color: rgba(178,133,234,0.08);"></div>
+    <div class="ring" style="width: 2000px; height: 2000px; left: 50%; top: 50%; transform: translate(-50%, -50%); border-color: rgba(178,133,234,0.05);"></div>
+    <div class="ring" style="width: 900px; height: 900px; left: 50%; top: 50%; transform: translate(-50%, -50%); border-color: rgba(178,133,234,0.12);"></div>
+    <div class="dot" style="width: 14px; height: 14px; left: calc(50% + 700px); top: 50%;"></div>
+    <div class="dot" style="width: 8px; height: 8px; left: calc(50% - 1000px); top: calc(50% + 120px); background: #fff; box-shadow: 0 0 20px rgba(255,255,255,0.4);"></div>
+    <div class="dot" style="width: 20px; height: 20px; left: calc(50% + 320px); top: calc(50% - 430px);"></div>
+    <div class="dot" style="width: 6px; height: 6px; left: calc(50% - 450px); top: calc(50% - 380px); background: #fff; opacity: 0.4;"></div>
+  </div>
+
+  <!-- top chrome -->
+  <div class="chrome top">
+    <span class="mono">CX CIRCLE SYDNEY <span class="sep"></span> ILUMINA <span class="sep"></span> 07 MAY 2026</span>
+    <span class="mono">MAINSTAGE</span>
+  </div>
+
+  <!-- centered content -->
+  <div style="position:absolute; left: 160px; right: 160px; top: 50%; transform: translateY(-50%); z-index: 2;">
+    <div class="kicker anim-kicker" style="margin-bottom: 48px;">A practitioner's story</div>
+
+    <h1 class="display anim-headline" style="font-size: 168px; line-height: 0.92; margin-bottom: 56px; max-width: 1500px;">
+      From&nbsp;test&nbsp;paralysis<br/>
+      to <span style="color: var(--accent);">20+&nbsp;tests</span><br/>
+      a&nbsp;month.
+    </h1>
+
+    <div class="anim-body" style="display:flex; align-items:center; gap: 40px; margin-top: 56px;">
+      <div style="width: 84px; height: 84px; border-radius: 999px; background: linear-gradient(135deg, #9C5CE3 0%, #7622d7 100%); display:flex; align-items:center; justify-content:center; font-weight: 700; font-size: 32px; color: #fff; letter-spacing: -0.02em;">MB</div>
+      <div>
+        <div style="font-size: 36px; font-weight: 500; letter-spacing: -0.01em;">Mick Baker</div>
+        <div style="font-size: 24px; font-weight: 300; color: var(--ink-2); margin-top: 4px;">Head of Conversion — Employment Hero</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- bottom chrome -->
+  <div class="chrome bot">
+    <span class="eh-mark"><span class="glyph"></span><span class="wm">employment hero</span></span>
+    <span style="display:inline-flex; align-items:center; gap: 20px; color: var(--ink-3); font-size: 18px;">
+      In partnership with
+      <span class="opti-mark"><span class="dot"></span>Optimizely</span>
+    </span>
+  </div>
+</section>
+
+<!-- ────────────────────────────────────────────────────────────────
+     SLIDE 2 · Audience poll — four options
+     ──────────────────────────────────────────────────────────────── -->
+<section data-label="The opening choice" style="background: #0B0B14;">
+  <div class="chrome top">
+    <span class="mono">01 &nbsp;·&nbsp; A CHOICE</span>
+    <span class="mono">02 / 18</span>
+  </div>
+
+  <div style="position:absolute; left: 120px; right: 120px; top: 150px;">
+    <div class="anim-kicker" style="display:flex; align-items:center; gap: 14px; margin-bottom: 24px; color: var(--ink-3); font-size: 20px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase;">
+      <span style="width: 8px; height: 8px; border-radius: 999px; background: var(--accent); box-shadow: 0 0 12px var(--accent); animation: pulseDot 2.2s ease-in-out infinite;"></span>
+      Live · audience poll
+    </div>
+    <div class="anim-headline display" style="font-size: 96px; line-height: 1.0; letter-spacing: -0.025em; max-width: 1700px;">
+      When velocity becomes your problem — <span style="color: var(--accent);">what do you&nbsp;do?</span>
+    </div>
+  </div>
+
+  <!-- 2×2 card grid -->
+  <div style="position:absolute; left: 120px; right: 120px; top: 490px; bottom: 170px; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 28px;">
+    <!-- A -->
+    <div class="anim-card s1" style="padding: 40px 44px; border: 1px solid var(--rule); border-radius: 18px; background: rgba(255,255,255,0.03); display:flex; align-items: center; gap: 36px;">
+      <div style="font-family: 'Saiga', serif; font-weight: 300; font-size: 128px; color: var(--accent); line-height: 1; letter-spacing: -0.03em; min-width: 120px;">A</div>
+      <div>
+        <div style="font-size: 40px; font-weight: 500; letter-spacing: -0.01em; margin-bottom: 10px;">Hire.</div>
+        <div style="font-size: 22px; color: var(--ink-3); line-height: 1.35;">Add headcount, add&nbsp;capacity.</div>
+      </div>
+    </div>
+    <!-- B — slightly more magnetic -->
+    <div class="anim-card s2" style="padding: 40px 44px; border: 1px solid rgba(178,133,234,0.45); border-radius: 18px; background: linear-gradient(135deg, rgba(178,133,234,0.10) 0%, rgba(178,133,234,0.02) 100%); display:flex; align-items: center; gap: 36px; box-shadow: 0 0 40px rgba(156,92,227,0.15), inset 0 0 0 1px rgba(178,133,234,0.1);">
+      <div style="font-family: 'Saiga', serif; font-weight: 300; font-size: 128px; color: var(--accent); line-height: 1; letter-spacing: -0.03em; min-width: 120px; text-shadow: 0 0 28px rgba(156,92,227,0.55);">B</div>
+      <div>
+        <div style="font-size: 40px; font-weight: 500; letter-spacing: -0.01em; margin-bottom: 10px;">Fix the process.</div>
+        <div style="font-size: 22px; color: var(--ink-2); line-height: 1.35;">Rebuild before you&nbsp;recruit.</div>
+      </div>
+    </div>
+    <!-- C -->
+    <div class="anim-card s3" style="padding: 40px 44px; border: 1px solid var(--rule); border-radius: 18px; background: rgba(255,255,255,0.03); display:flex; align-items: center; gap: 36px;">
+      <div style="font-family: 'Saiga', serif; font-weight: 300; font-size: 128px; color: var(--accent); line-height: 1; letter-spacing: -0.03em; min-width: 120px;">C</div>
+      <div>
+        <div style="font-size: 40px; font-weight: 500; letter-spacing: -0.01em; margin-bottom: 10px;">Both, at the same time.</div>
+        <div style="font-size: 22px; color: var(--ink-3); line-height: 1.35;">Somehow.</div>
+      </div>
+    </div>
+    <!-- D — self-deprecating -->
+    <div class="anim-card s4" style="padding: 40px 44px; border: 1px dashed rgba(255,255,255,0.14); border-radius: 18px; background: rgba(255,255,255,0.015); display:flex; align-items: center; gap: 36px;">
+      <div style="font-family: 'Saiga', serif; font-weight: 200; font-size: 128px; color: rgba(178,133,234,0.6); line-height: 1; letter-spacing: -0.03em; min-width: 120px;">D</div>
+      <div>
+        <div style="font-size: 36px; font-weight: 300; letter-spacing: -0.005em; margin-bottom: 10px; color: var(--ink-2); font-style: italic;">Hope the backlog clears itself.</div>
+        <div style="font-size: 20px; color: var(--ink-4); line-height: 1.35;">It won't.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="anim-body" style="position: absolute; left: 120px; right: 120px; bottom: 110px; font-size: 22px; color: var(--ink-3); letter-spacing: 0.02em;">
+    Keep your answer. We'll revisit it.
+  </div>
+
+  <div class="chrome bot">
+    <span class="eh-mark"><span class="glyph"></span><span class="wm">employment hero</span></span>
+    <span class="opti-mark"><span class="dot"></span>Optimizely</span>
+  </div>
+</section>
+
+<!-- ────────────────────────────────────────────────────────────────
+     SLIDE 3 · AI-adjacent vs AI-first
+     ──────────────────────────────────────────────────────────────── -->
+<section data-label="AI-adjacent vs AI-first" style="background: #0B0B14;">
+  <div class="chrome top">
+    <span class="mono">02 &nbsp;·&nbsp; TWO VERSIONS OF AI</span>
+    <span class="mono">03 / 18</span>
+  </div>
+
+  <div style="position:absolute; left: 120px; right: 120px; top: 160px; bottom: 140px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px;">
+
+    <!-- LEFT — AI-Adjacent -->
+    <div style="display:flex; flex-direction: column; justify-content: space-between; border-right: 1px solid var(--rule); padding-right: 64px;">
+      <div>
+        <div style="font-size: 22px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.30); margin-bottom: 36px;">Version 01</div>
+        <div class="display anim-headline" style="font-size: 96px; line-height: 0.98; color: rgba(255,255,255,0.40); margin-bottom: 56px;">AI-adjacent</div>
+        <div style="font-size: 28px; font-weight: 300; line-height: 1.35; color: rgba(255,255,255,0.36); max-width: 620px;">
+          Bolted on top of how you already work.<br/>
+          The workflow stays broken — just slightly quicker.
+        </div>
+      </div>
+      <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 22px;">
+        <li style="display:flex; align-items:center; gap: 18px; font-size: 26px; color: rgba(255,255,255,0.46);">
+          <span style="width: 6px; height: 6px; border-radius: 999px; background: rgba(255,255,255,0.25);"></span>
+          Faster first drafts
+        </li>
+        <li style="display:flex; align-items:center; gap: 18px; font-size: 26px; color: rgba(255,255,255,0.46);">
+          <span style="width: 6px; height: 6px; border-radius: 999px; background: rgba(255,255,255,0.25);"></span>
+          A chatbot in Slack
+        </li>
+        <li style="display:flex; align-items:center; gap: 18px; font-size: 26px; color: rgba(255,255,255,0.46);">
+          <span style="width: 6px; height: 6px; border-radius: 999px; background: rgba(255,255,255,0.25);"></span>
+          Same six approval cycles
+        </li>
+        <li style="display:flex; align-items:center; gap: 18px; font-size: 26px; color: rgba(255,255,255,0.46);">
+          <span style="width: 6px; height: 6px; border-radius: 999px; background: rgba(255,255,255,0.25);"></span>
+          Same tests per year
+        </li>
+      </ul>
+    </div>
+
+    <!-- RIGHT — AI-First -->
+    <div style="display:flex; flex-direction: column; justify-content: space-between; padding-left: 0;">
+      <div>
+        <div style="font-size: 22px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 36px;">Version 02</div>
+        <div class="display anim-headline" style="font-size: 96px; line-height: 0.98; color: var(--ink); margin-bottom: 56px;">AI-first</div>
+        <div style="font-size: 28px; font-weight: 300; line-height: 1.35; color: var(--ink-2); max-width: 620px;">
+          The system rebuilt around it.<br/>
+          AI as the execution layer — not a sidekick.
+        </div>
+      </div>
+      <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 22px;">
+        <li style="display:flex; align-items:center; gap: 18px; font-size: 26px; color: var(--ink);">
+          <span style="width: 6px; height: 6px; border-radius: 999px; background: var(--accent); box-shadow: 0 0 10px var(--accent);"></span>
+          Research straight to hypothesis
+        </li>
+        <li style="display:flex; align-items:center; gap: 18px; font-size: 26px; color: var(--ink);">
+          <span style="width: 6px; height: 6px; border-radius: 999px; background: var(--accent); box-shadow: 0 0 10px var(--accent);"></span>
+          Agents that design, write, ship
+        </li>
+        <li style="display:flex; align-items:center; gap: 18px; font-size: 26px; color: var(--ink);">
+          <span style="width: 6px; height: 6px; border-radius: 999px; background: var(--accent); box-shadow: 0 0 10px var(--accent);"></span>
+          Humans direct the strategy
+        </li>
+        <li style="display:flex; align-items:center; gap: 18px; font-size: 26px; color: var(--ink);">
+          <span style="width: 6px; height: 6px; border-radius: 999px; background: var(--accent); box-shadow: 0 0 10px var(--accent);"></span>
+          20+ tests a month
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="chrome bot">
+    <span class="eh-mark"><span class="glyph"></span><span class="wm">employment hero</span></span>
+    <span class="opti-mark"><span class="dot"></span>Optimizely</span>
+  </div>
+</section>
+
+<!-- ────────────────────────────────────────────────────────────────
+     SLIDE 4 · Employment Hero context
+     ──────────────────────────────────────────────────────────────── -->
+<section data-label="Employment Hero" style="background: #0B0B14;">
+  <div class="chrome top">
+    <span class="mono">03 &nbsp;·&nbsp; CONTEXT</span>
+    <span class="mono">04 / 18</span>
+  </div>
+
+  <div style="position:absolute; left: 120px; right: 120px; top: 180px; display: grid; grid-template-columns: 1fr 1fr; gap: 96px; align-items: start;">
+    <div>
+      <div class="kicker anim-kicker" style="margin-bottom: 36px;">Who we are</div>
+      <div class="display anim-headline" style="font-size: 108px; line-height: 0.95; margin-bottom: 48px;">
+        A global<br/>HR&nbsp;tech<br/>platform.
+      </div>
+      <div class="body-lg" style="max-width: 720px; color: var(--ink-2);">
+        Payroll, people, benefits — rebuilt for small and mid-sized businesses. Conversion is a function of two, newly established, reporting into growth.
+      </div>
+    </div>
+
+    <div style="padding-top: 80px;">
+      <div class="kicker anim-kicker" style="margin-bottom: 36px; color: var(--ink-3);">Operating markets</div>
+
+      <div style="display: grid; grid-template-columns: 1fr; gap: 24px;">
+        <div style="display:flex; align-items:center; justify-content: space-between; padding: 28px 32px; border: 1px solid var(--rule); border-radius: 14px; background: rgba(255,255,255,0.02);">
+          <div style="display:flex; align-items:center; gap: 22px;">
+            <div style="padding: 8px 16px; border-radius: 6px; background: rgba(156,92,227,0.15); border: 1px solid rgba(156,92,227,0.4); font-family: ui-monospace, Menlo, monospace; font-size: 18px; font-weight: 700; letter-spacing: 0.1em; color: var(--accent);">ANZ</div>
+            <div style="font-size: 32px; font-weight: 500; letter-spacing: -0.01em;">Australia &amp; New&nbsp;Zealand</div>
+          </div>
+          <div style="font-size: 20px; color: var(--accent); font-weight: 500;">HQ</div>
+        </div>
+
+        <div style="display:flex; align-items:center; justify-content: space-between; padding: 28px 32px; border: 1px solid var(--rule); border-radius: 14px; background: rgba(255,255,255,0.02);">
+          <div style="display:flex; align-items:center; gap: 22px;">
+            <div style="padding: 8px 16px; border-radius: 6px; background: rgba(156,92,227,0.15); border: 1px solid rgba(156,92,227,0.4); font-family: ui-monospace, Menlo, monospace; font-size: 18px; font-weight: 700; letter-spacing: 0.1em; color: var(--accent);">UK</div>
+            <div style="font-size: 32px; font-weight: 500; letter-spacing: -0.01em;">United Kingdom</div>
+          </div>
+        </div>
+
+        <div style="display:flex; align-items:center; justify-content: space-between; padding: 28px 32px; border: 1px solid var(--rule); border-radius: 14px; background: rgba(255,255,255,0.02);">
+          <div style="display:flex; align-items:center; gap: 22px;">
+            <div style="padding: 8px 16px; border-radius: 6px; background: rgba(156,92,227,0.15); border: 1px solid rgba(156,92,227,0.4); font-family: ui-monospace, Menlo, monospace; font-size: 18px; font-weight: 700; letter-spacing: 0.1em; color: var(--accent);">CA</div>
+            <div style="font-size: 32px; font-weight: 500; letter-spacing: -0.01em;">Canada</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 56px; display:flex; gap: 48px; font-size: 20px; color: var(--ink-3);">
+        <div><div class="display anim-headline" style="font-size: 56px; color: var(--ink); margin-bottom: 4px;">3</div>continents</div>
+        <div><div class="display anim-headline" style="font-size: 56px; color: var(--ink); margin-bottom: 4px;">2</div>conversion team</div>
+        <div><div class="display anim-headline" style="font-size: 56px; color: var(--ink); margin-bottom: 4px;">1</div>shared playbook</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chrome bot">
+    <span class="eh-mark"><span class="glyph"></span><span class="wm">employment hero</span></span>
+    <span class="opti-mark"><span class="dot"></span>Optimizely</span>
+  </div>
+</section>
+
+<!-- ────────────────────────────────────────────────────────────────
+     SLIDE 5 · Test paralysis
+     ──────────────────────────────────────────────────────────────── -->
+<section data-label="Test paralysis" style="background: #0B0B14;">
+  <div class="chrome top">
+    <span class="mono">04 &nbsp;·&nbsp; THE PROBLEM</span>
+    <span class="mono">05 / 18</span>
+  </div>
+
+  <div style="position:absolute; left: 120px; right: 120px; top: 170px;">
+    <div class="kicker anim-kicker" style="margin-bottom: 40px; color: var(--warn);">The problem</div>
+    <div class="display anim-headline" style="font-size: 220px; line-height: 0.9; letter-spacing: -0.035em; margin-bottom: 40px; color: var(--ink);">
+      Test<br/>paralysis.
+    </div>
+    <div class="body-lg" style="max-width: 1100px; color: var(--ink-2);">
+      That creeping sense that the data you need is always one more approval cycle away.
+    </div>
+  </div>
+
+  <!-- friction chain -->
+  <div style="position: absolute; left: 120px; right: 120px; bottom: 140px;">
+    <div style="font-size: 18px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-4); margin-bottom: 24px;">The chain of delay</div>
+    <div style="display:flex; align-items: center; gap: 0; flex-wrap: nowrap;">
+      <!-- generated nodes -->
+      <div style="flex: 1; background: rgba(255,255,255,0.04); border: 1px solid var(--rule); border-radius: 10px; padding: 20px 18px; font-size: 20px; color: var(--ink-2); text-align: center;">Research</div>
+      <div style="width: 44px; text-align: center; color: var(--warn); font-size: 22px;">╌╌</div>
+      <div style="flex: 1; background: rgba(255,255,255,0.04); border: 1px solid var(--rule); border-radius: 10px; padding: 20px 18px; font-size: 20px; color: var(--ink-2); text-align: center;">Brief</div>
+      <div style="width: 44px; text-align: center; color: var(--warn); font-size: 22px;">╌╌</div>
+      <div style="flex: 1; background: rgba(255,255,255,0.04); border: 1px solid var(--rule); border-radius: 10px; padding: 20px 18px; font-size: 20px; color: var(--ink-2); text-align: center;">Design</div>
+      <div style="width: 44px; text-align: center; color: var(--warn); font-size: 22px;">╌╌</div>
+      <div style="flex: 1; background: rgba(255,255,255,0.04); border: 1px solid var(--rule); border-radius: 10px; padding: 20px 18px; font-size: 20px; color: var(--ink-2); text-align: center;">Copy</div>
+      <div style="width: 44px; text-align: center; color: var(--warn); font-size: 22px;">╌╌</div>
+      <div style="flex: 1; background: rgba(255,255,255,0.04); border: 1px solid var(--rule); border-radius: 10px; padding: 20px 18px; font-size: 20px; color: var(--ink-2); text-align: center;">Engineering</div>
+      <div style="width: 44px; text-align: center; color: var(--warn); font-size: 22px;">╌╌</div>
+      <div style="flex: 1; background: rgba(254,122,89,0.10); border: 1px solid rgba(254,122,89,0.35); border-radius: 10px; padding: 20px 18px; font-size: 20px; color: var(--ink); text-align: center;">Live</div>
+    </div>
+    <div style="display:flex; justify-content:space-between; margin-top: 20px; font-size: 16px; color: var(--ink-4); letter-spacing: 0.06em; text-transform: uppercase;">
+      <span>Week 01</span>
+      <span>Week 02</span>
+      <span>Week 03</span>
+      <span>Week 04</span>
+      <span>Week 05</span>
+      <span>Week&nbsp;06+</span>
+    </div>
+  </div>
+
+  <div class="chrome bot">
+    <span class="eh-mark"><span class="glyph"></span><span class="wm">employment hero</span></span>
+    <span class="opti-mark"><span class="dot"></span>Optimizely</span>
+  </div>
+</section>
+
+<!-- ────────────────────────────────────────────────────────────────
+     SLIDE 6 · The ceiling 10–12
+     ──────────────────────────────────────────────────────────────── -->
+<section data-label="The ceiling" style="background: #0B0B14;">
+  <div class="chrome top">
+    <span class="mono">05 &nbsp;·&nbsp; THE NUMBER</span>
+    <span class="mono">06 / 18</span>
+  </div>
+
+  <div style="position:absolute; inset: 0; display:flex; align-items: center; padding: 0 160px;">
+    <div style="width: 100%;">
+      <div class="kicker anim-kicker" style="margin-bottom: 48px;">Our annual ceiling</div>
+      <div class="display anim-headline" style="font-size: 560px; line-height: 0.82; letter-spacing: -0.06em; margin-left: -16px; color: var(--ink);">
+        10<span style="color: var(--accent);">–</span>12
+      </div>
+      <div style="display:flex; align-items: flex-end; justify-content: space-between; margin-top: 48px;">
+        <div style="font-size: 44px; font-weight: 400; line-height: 1.2; max-width: 900px; letter-spacing: -0.01em;">
+          A/B tests per year.<br/>
+          <span style="color: var(--ink-3);">That was the ceiling — not the team's effort, the system's limit.</span>
+        </div>
+        <div style="text-align: right; max-width: 500px;">
+          <div style="font-size: 20px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-4); margin-bottom: 12px;">Diagnosis</div>
+          <div style="font-size: 32px; font-weight: 500; color: var(--accent); line-height: 1.2;">Not a people problem.<br/>A system&nbsp;problem.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chrome bot">
+    <span class="eh-mark"><span class="glyph"></span><span class="wm">employment hero</span></span>
+    <span class="opti-mark"><span class="dot"></span>Optimizely</span>
+  </div>
+</section>
+
+<!-- ────────────────────────────────────────────────────────────────
+     SLIDE 7 · Three principles
+     ──────────────────────────────────────────────────────────────── -->
+<section data-label="Three principles" style="background: #0B0B14;">
+  <div class="chrome top">
+    <span class="mono">06 &nbsp;·&nbsp; WHAT I LEARNED</span>
+    <span class="mono">07 / 18</span>
+  </div>
+
+  <div style="position:absolute; left: 120px; right: 120px; top: 160px; bottom: 140px; display:flex; flex-direction: column; justify-content: center;">
+    <div class="kicker anim-kicker" style="margin-bottom: 24px;">Three principles</div>
+    <div class="display anim-headline" style="font-size: 72px; margin-bottom: 64px; line-height: 1.0; color: var(--ink);">
+      Before the product — these three&nbsp;things.
+    </div>
+
+    <div>
+      <div class="principle-row">
+        <div class="num">01</div>
+        <div>
+          <div class="title">Think like a product builder, not a service team.</div>
+          <div class="sub">Stop treating conversion as a queue. Treat it as a product you&nbsp;ship.</div>
+        </div>
+      </div>
+      <div class="principle-row">
+        <div class="num">02</div>
+        <div>
+          <div class="title">Scale the process before you grow the team.</div>
+          <div class="sub">Hiring won't fix a workflow that was broken at headcount&nbsp;two.</div>
+        </div>
+      </div>
+      <div class="principle-row">
+        <div class="num">03</div>
+        <div>
+          <div class="title">The goal isn't faster tests — it's reclaiming strategic thinking.</div>
+          <div class="sub">Velocity buys you the one thing a conversion team never&nbsp;has: time to think.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chrome bot">
+    <span class="eh-mark"><span class="glyph"></span><span class="wm">employment hero</span></span>
+    <span class="opti-mark"><span class="dot"></span>Optimizely</span>
+  </div>
+</section>
+
+<!-- ────────────────────────────────────────────────────────────────
+     SLIDE 8 · Conversion Hub reveal
+     ──────────────────────────────────────────────────────────────── -->
+<section data-label="Conversion Hub" style="background: radial-gradient(ellipse at center, #1a0f2e 0%, #0B0B14 60%);">
+  <div class="chrome top">
+    <span class="mono">07 &nbsp;·&nbsp; REVEAL</span>
+    <span class="mono">08 / 18</span>
+  </div>
+
+  <div class="orbit-bg" aria-hidden="true">
+    <div class="ring" style="width: 1100px; height: 1100px; left: 50%; top: 50%; transform: translate(-50%,-50%); border-color: rgba(178,133,234,0.18);"></div>
+    <div class="ring" style="width: 1600px; height: 1600px; left: 50%; top: 50%; transform: translate(-50%,-50%); border-color: rgba(178,133,234,0.10);"></div>
+    <div class="ring" style="width: 2200px; height: 2200px; left: 50%; top: 50%; transform: translate(-50%,-50%); border-color: rgba(178,133,234,0.06);"></div>
+    <div class="dot" style="width: 14px; height: 14px; left: calc(50% + 548px); top: calc(50% - 100px); background: var(--accent);"></div>
+    <div class="dot" style="width: 10px; height: 10px; left: calc(50% - 800px); top: calc(50% + 200px); background: #fff; opacity: 0.6;"></div>
+    <div class="dot" style="width: 6px; height: 6px; left: calc(50% + 780px); top: calc(50% + 300px); background: #fff; opacity: 0.5;"></div>
+  </div>
+
+  <div style="position:absolute; inset: 0; display:flex; align-items: center; justify-content: center; text-align: center;">
+    <div style="max-width: 1500px;">
+      <div class="kicker anim-kicker" style="margin-bottom: 40px;">Introducing</div>
+      <div style="display:inline-flex; align-items:center; gap: 28px; margin-bottom: 32px;">
+        <div style="width: 96px; height: 96px; border-radius: 24px; background: linear-gradient(135deg, #9C5CE3 0%, #7622d7 100%); display:flex; align-items: center; justify-content: center; box-shadow: 0 0 60px rgba(156,92,227,0.5);">
+          <!-- hub glyph: three orbits around a centre -->
+          <svg viewBox="0 0 64 64" width="52" height="52" fill="none" stroke="#fff" stroke-width="2.5">
+            <circle cx="32" cy="32" r="5" fill="#fff"/>
+            <circle cx="32" cy="32" r="14"/>
+            <circle cx="32" cy="32" r="23" opacity="0.6"/>
+          </svg>
+        </div>
+      </div>
+      <div class="display anim-headline" style="font-size: 156px; line-height: 0.95; letter-spacing: -0.035em; color: var(--ink);">
+        The Conversion<br/><span style="background: linear-gradient(90deg, #c9aef1 0%, #9C5CE3 50%, #b285ea 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Hub.</span>
+      </div>
+      <div style="margin-top: 48px; font-size: 36px; font-weight: 300; line-height: 1.35; color: var(--ink-2); max-width: 1200px; margin-left: auto; margin-right: auto;">
+        One interface. One source of truth.<br/>
+        <span style="color: var(--ink);">AI as the execution layer.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="chrome bot">
+    <span class="eh-mark"><span class="glyph"></span><span class="wm">employment hero</span></span>
+    <span class="opti-mark"><span class="dot"></span>Optimizely</span>
+  </div>
+</section>
+
+<!-- ────────────────────────────────────────────────────────────────
+     SLIDE 9 · Architecture (the hero systems slide)
+     ──────────────────────────────────────────────────────────────── -->
+<section data-label="Architecture" class="grid-bg" style="background: #0B0B14;">
+  <div class="chrome top">
+    <span class="mono">08 &nbsp;·&nbsp; ARCHITECTURE</span>
+    <span class="mono">09 / 18</span>
+  </div>
+
+  <div style="position:absolute; left: 120px; top: 140px;">
+    <div class="kicker anim-kicker" style="margin-bottom: 14px;">How it connects</div>
+    <div class="display anim-headline" style="font-size: 64px; letter-spacing: -0.02em;">One hub, five&nbsp;layers.</div>
+  </div>
+
+  <!-- DIAGRAM CANVAS -->
+  <svg viewBox="0 0 1920 780" style="position:absolute; left: 0; top: 260px; width: 1920px; height: 780px;" aria-hidden="true">
+    <!-- soft glow behind hub -->
+    <defs>
+      <radialGradient id="hubGlow" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#9C5CE3" stop-opacity="0.45"/>
+        <stop offset="60%" stop-color="#9C5CE3" stop-opacity="0.08"/>
+        <stop offset="100%" stop-color="#9C5CE3" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="wire" x1="0" x2="1" y1="0" y2="0">
+        <stop offset="0%" stop-color="#b285ea" stop-opacity="0.15"/>
+        <stop offset="50%" stop-color="#b285ea" stop-opacity="0.75"/>
+        <stop offset="100%" stop-color="#b285ea" stop-opacity="0.15"/>
+      </linearGradient>
+    </defs>
+    <circle cx="960" cy="390" r="320" fill="url(#hubGlow)"/>
+
+    <!-- orbit rings (decorative) -->
+    <circle cx="960" cy="390" r="280" fill="none" stroke="rgba(178,133,234,0.12)" stroke-width="1"/>
+    <circle cx="960" cy="390" r="380" fill="none" stroke="rgba(178,133,234,0.08)" stroke-width="1"/>
+
+    <!-- connector wires from hub to each surrounding node -->
+    <!-- left inputs -->
+    <path d="M 300 180 Q 630 260 810 360" stroke="url(#wire)" stroke-width="1.5" fill="none"/>
+    <path d="M 300 330 Q 600 360 820 380" stroke="url(#wire)" stroke-width="1.5" fill="none"/>
+    <path d="M 300 470 Q 600 430 820 410" stroke="url(#wire)" stroke-width="1.5" fill="none"/>
+    <!-- intelligence (top) -->
+    <path d="M 820 100 Q 900 240 940 340" stroke="url(#wire)" stroke-width="1.5" fill="none"/>
+    <path d="M 1100 100 Q 1020 240 980 340" stroke="url(#wire)" stroke-width="1.5" fill="none"/>
+    <!-- management (bottom) -->
+    <path d="M 760 680 Q 870 560 940 440" stroke="url(#wire)" stroke-width="1.5" fill="none"/>
+    <path d="M 960 720 Q 960 580 960 440" stroke="url(#wire)" stroke-width="1.5" fill="none"/>
+    <path d="M 1160 680 Q 1050 560 980 440" stroke="url(#wire)" stroke-width="1.5" fill="none"/>
+    <!-- execution (right) -->
+    <path d="M 1620 180 Q 1300 260 1110 360" stroke="url(#wire)" stroke-width="2.5" fill="none"/>
+    <path d="M 1620 330 Q 1320 360 1100 380" stroke="url(#wire)" stroke-width="1.5" fill="none"/>
+    <path d="M 1620 470 Q 1320 430 1100 410" stroke="url(#wire)" stroke-width="1.5" fill="none"/>
+
+    <!-- tiny flow dots on the Optimizely wire (to signal the hero link) -->
+    <circle cx="1360" cy="308" r="3" fill="#b285ea"/>
+    <circle cx="1200" cy="350" r="3" fill="#b285ea"/>
+  </svg>
+
+  <!-- HUB (centred) -->
+  <div style="position:absolute; left: 50%; top: 650px; transform: translate(-50%,-50%); z-index: 3; text-align: center;">
+    <div style="width: 220px; height: 220px; border-radius: 28px; background: linear-gradient(135deg, #9C5CE3 0%, #7622d7 100%); display:flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 0 100px rgba(156,92,227,0.55), inset 0 1px 0 rgba(255,255,255,0.2); margin: 0 auto;">
+      <svg viewBox="0 0 64 64" width="60" height="60" fill="none" stroke="#fff" stroke-width="2.5">
+        <circle cx="32" cy="32" r="5" fill="#fff"/>
+        <circle cx="32" cy="32" r="14"/>
+        <circle cx="32" cy="32" r="23" opacity="0.6"/>
+      </svg>
+      <div style="margin-top: 14px; font-size: 20px; font-weight: 600; color: #fff;">Conversion Hub</div>
+    </div>
+  </div>
+
+  <!-- LAYER LABELS + NODES -->
+  <!-- LEFT: Input / Research -->
+  <div style="position: absolute; left: 120px; top: 420px; z-index: 2;">
+    <div style="font-size: 14px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px;">Input · Research</div>
+    <div style="display: grid; gap: 12px;">
+      <div class="node"><span class="tag-dot"></span>Miro — heatmaps &amp; boards</div>
+      <div class="node"><span class="tag-dot"></span>Hotjar — survey data</div>
+      <div class="node"><span class="tag-dot"></span>PDFs · Documents</div>
+    </div>
+  </div>
+
+  <!-- TOP: Intelligence -->
+  <div style="position: absolute; left: 50%; top: 340px; transform: translateX(-50%); z-index: 2; text-align: center;">
+    <div style="font-size: 14px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px;">Intelligence</div>
+    <div style="display: flex; gap: 14px; justify-content: center;">
+      <div class="node" style="border-color: rgba(178,133,234,0.5); background: #1a0f2e;"><span class="tag-dot"></span>Claude API</div>
+      <div class="node" style="border-color: rgba(178,133,234,0.5); background: #1a0f2e;"><span class="tag-dot"></span>Claude Code</div>
+    </div>
+  </div>
+
+  <!-- BOTTOM: Management -->
+  <div style="position: absolute; left: 50%; bottom: 40px; transform: translateX(-50%); z-index: 2; text-align: center;">
+    <div style="font-size: 14px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px;">Workflow · Management</div>
+    <div style="display: flex; gap: 14px; justify-content: center;">
+      <div class="node"><span class="tag-dot"></span>Asana</div>
+      <div class="node"><span class="tag-dot"></span>Google Sheets</div>
+      <div class="node"><span class="tag-dot"></span>Confluence</div>
+    </div>
+  </div>
+
+  <!-- RIGHT: Execution + Distribution stacked -->
+  <div style="position: absolute; right: 120px; top: 420px; z-index: 2; text-align: right;">
+    <div style="font-size: 14px; letter-spacing: 0.2em; text-transform: uppercase; color: #fe7a59; margin-bottom: 16px;">Execution</div>
+    <div style="display: grid; gap: 12px; justify-items: end;">
+      <div class="node" style="border-color: rgba(254,122,89,0.5); background: linear-gradient(135deg, #1a1527 0%, #1a0f24 100%); font-size: 22px; padding: 16px 22px;">
+        <span style="width: 14px; height: 14px; border-radius: 999px; background: linear-gradient(135deg, #0037FF, #861DFF);"></span>
+        Optimizely
+        <span style="font-size: 14px; color: var(--ink-3); margin-left: 6px; font-weight: 400;">— primary</span>
+      </div>
+      <div class="node" style="font-size: 18px;"><span class="tag-dot" style="background: #fe7a59;"></span>Custom Event API</div>
+      <div class="node" style="font-size: 18px; opacity: 0.55; border-style: dashed;"><span class="tag-dot" style="background: var(--ink-3);"></span>Figma — transitioning out</div>
+    </div>
+  </div>
+
+  <!-- FAR RIGHT FLOATING: Distribution -->
+  <div style="position: absolute; right: 120px; top: 140px; z-index: 2; text-align: right; padding-top: 140px;">
+    <div style="font-size: 14px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px;">Distribution</div>
+    <div style="display: grid; gap: 12px; justify-items: end;">
+      <div class="node"><span class="tag-dot"></span>Slack — ANZ · UK · CA</div>
+      <div class="node"><span class="tag-dot"></span>Dashboard — live pipeline</div>
+    </div>
+  </div>
+
+  <div class="chrome bot">
+    <span class="eh-mark"><span class="glyph"></span><span class="wm">employment hero</span></span>
+    <span class="opti-mark"><span class="dot"></span>Optimizely</span>
+  </div>
+</section>
+
+<!-- ────────────────────────────────────────────────────────────────
+     SLIDE 10 · Dashboard
+     ──────────────────────────────────────────────────────────────── -->
+<section data-label="Programme dashboard" style="background: #0B0B14;">
+  <div class="chrome top">
+    <span class="mono">09 &nbsp;·&nbsp; DASHBOARD</span>
+    <span class="mono">10 / 18</span>
+  </div>
+
+  <div style="position:absolute; left: 120px; top: 150px; right: 120px;">
+    <div class="kicker anim-kicker" style="margin-bottom: 14px;">Programme health</div>
+    <div class="display anim-headline" style="font-size: 64px; letter-spacing: -0.02em; max-width: 1400px;">No report building. Every bottleneck is&nbsp;visible.</div>
+  </div>
+
+  <!-- DASHBOARD MOCK -->
+  <div style="position:absolute; left: 120px; right: 120px; top: 350px; bottom: 140px; background: #101024; border: 1px solid var(--rule); border-radius: 16px; padding: 32px; display: grid; grid-template-columns: 280px 1fr; gap: 28px;">
+    <!-- sidebar -->
+    <div style="display: grid; gap: 10px; align-content: start;">
+      <div style="display:flex; align-items:center; gap: 12px; padding-bottom: 18px; border-bottom: 1px solid var(--rule); margin-bottom: 12px;">
+        <div style="width: 28px; height: 28px; border-radius: 8px; background: linear-gradient(135deg, #9C5CE3, #7622d7);"></div>
+        <div style="font-size: 16px; font-weight: 600;">Conversion Hub</div>
+      </div>
+      <div style="padding: 10px 14px; border-radius: 8px; background: rgba(178,133,234,0.14); color: #fff; font-size: 14px; font-weight: 500;">Programme</div>
+      <div style="padding: 10px 14px; border-radius: 8px; color: var(--ink-3); font-size: 14px;">Research</div>
+      <div style="padding: 10px 14px; border-radius: 8px; color: var(--ink-3); font-size: 14px;">Pipeline</div>
+      <div style="padding: 10px 14px; border-radius: 8px; color: var(--ink-3); font-size: 14px;">Agents</div>
+      <div style="padding: 10px 14px; border-radius: 8px; color: var(--ink-3); font-size: 14px;">Results</div>
+      <div style="padding: 10px 14px; border-radius: 8px; color: var(--ink-3); font-size: 14px;">Market channels</div>
+    </div>
+
+    <!-- main -->
+    <div style="display:flex; flex-direction: column; gap: 18px;">
+      <!-- top metric row -->
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;">
+        <div style="padding: 22px 24px; border-radius: 12px; background: rgba(178,133,234,0.10); border: 1px solid rgba(178,133,234,0.3);">
+          <div style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px;">Win rate</div>
+          <div class="display anim-headline" style="font-size: 64px; letter-spacing: -0.03em;">31<span style="font-size: 36px; color: var(--ink-2);">%</span></div>
+        </div>
+        <div style="padding: 22px 24px; border-radius: 12px; background: rgba(178,133,234,0.10); border: 1px solid rgba(178,133,234,0.3);">
+          <div style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px;">Avg lift</div>
+          <div class="display anim-headline" style="font-size: 64px; letter-spacing: -0.03em;">46<span style="font-size: 36px; color: var(--ink-2);">%</span></div>
+        </div>
+        <div style="padding: 22px 24px; border-radius: 12px; background: rgba(178,133,234,0.10); border: 1px solid rgba(178,133,234,0.3);">
+          <div style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px;">Annualised MQLs</div>
+          <div class="display anim-headline" style="font-size: 64px; letter-spacing: -0.03em;">1,100<span style="font-size: 30px; color: var(--ink-2);">+</span></div>
+        </div>
+        <div style="padding: 22px 24px; border-radius: 12px; background: rgba(178,133,234,0.10); border: 1px solid rgba(178,133,234,0.3);">
+          <div style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px;">Revenue impact</div>
+          <div class="display anim-headline" style="font-size: 64px; letter-spacing: -0.03em;">$600<span style="font-size: 30px; color: var(--ink-2);">K AUD</span></div>
+        </div>
+      </div>
+
+      <!-- pipeline row -->
+      <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 14px; flex: 1;">
+        <div style="padding: 22px 24px; border-radius: 12px; background: rgba(255,255,255,0.025); border: 1px solid var(--rule); display:flex; flex-direction: column;">
+          <div style="display:flex; justify-content: space-between; align-items: baseline; margin-bottom: 18px;">
+            <div style="font-size: 14px; font-weight: 600;">Live pipeline</div>
+            <div style="font-size: 12px; color: var(--ink-3);">Live · updated 2m ago</div>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(5, 1fr); gap: 10px; height: 100%;">
+            <!-- stages -->
+            <div style="display:flex; flex-direction: column; gap: 6px;"><div style="font-size: 12px; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.1em;">Research</div><div style="flex:1; background: rgba(178,133,234,0.25); border-radius: 6px;"></div><div style="font-size: 24px; font-weight: 600;">14</div></div>
+            <div style="display:flex; flex-direction: column; gap: 6px;"><div style="font-size: 12px; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.1em;">Briefed</div><div style="flex:1; background: rgba(178,133,234,0.45); border-radius: 6px;"></div><div style="font-size: 24px; font-weight: 600;">9</div></div>
+            <div style="display:flex; flex-direction: column; gap: 6px;"><div style="font-size: 12px; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.1em;">Built</div><div style="flex:1; background: rgba(178,133,234,0.65); border-radius: 6px;"></div><div style="font-size: 24px; font-weight: 600;">7</div></div>
+            <div style="display:flex; flex-direction: column; gap: 6px;"><div style="font-size: 12px; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.1em;">Live</div><div style="flex:1; background: rgba(156,92,227,0.85); border-radius: 6px;"></div><div style="font-size: 24px; font-weight: 600;">22</div></div>
+            <div style="display:flex; flex-direction: column; gap: 6px;"><div style="font-size: 12px; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.1em;">Decided</div><div style="flex:1; background: rgba(106,242,147,0.55); border-radius: 6px;"></div><div style="font-size: 24px; font-weight: 600;">18</div></div>
+          </div>
+        </div>
+
+        <div style="padding: 22px 24px; border-radius: 12px; background: rgba(255,255,255,0.025); border: 1px solid var(--rule);">
+          <div style="font-size: 14px; font-weight: 600; margin-bottom: 14px;">This month · by market</div>
+          <div style="display:grid; gap: 12px;">
+            <div><div style="display:flex; justify-content: space-between; font-size: 13px; color: var(--ink-2); margin-bottom: 6px;"><span>ANZ</span><span>14</span></div><div style="height: 6px; background: rgba(255,255,255,0.06); border-radius: 999px;"><div style="width: 70%; height: 100%; background: var(--accent); border-radius: 999px;"></div></div></div>
+            <div><div style="display:flex; justify-content: space-between; font-size: 13px; color: var(--ink-2); margin-bottom: 6px;"><span>UK</span><span>5</span></div><div style="height: 6px; background: rgba(255,255,255,0.06); border-radius: 999px;"><div style="width: 25%; height: 100%; background: var(--accent); border-radius: 999px;"></div></div></div>
+            <div><div style="display:flex; justify-content: space-between; font-size: 13px; color: var(--ink-2); margin-bottom: 6px;"><span>CA</span><span>3</span></div><div style="height: 6px; background: rgba(255,255,255,0.06); border-radius: 999px;"><div style="width: 15%; height: 100%; background: var(--accent); border-radius: 999px;"></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chrome bot">
+    <span class="eh-mark"><span class="glyph"></span><span class="wm">employment hero</span></span>
+    <span class="opti-mark"><span class="dot"></span>Optimizely</span>
+  </div>
+</section>
+
+<!-- ────────────────────────────────────────────────────────────────
+     SLIDE 11 · Research App
+     ──────────────────────────────────────────────────────────────── -->
+<section data-label="Research app" style="background: #0B0B14;">
+  <div class="chrome top">
+    <span class="mono">10 &nbsp;·&nbsp; RESEARCH APP</span>
+    <span class="mono">11 / 18</span>
+  </div>
+
+  <div style="position:absolute; left: 120px; right: 120px; top: 150px;">
+    <div class="kicker anim-kicker" style="margin-bottom: 14px;">Research · Intake</div>
+    <div class="display anim-headline" style="font-size: 72px; letter-spacing: -0.02em; max-width: 1500px;">
+      From raw data to experiment-ready brief — <span style="color: var(--accent);">automatically</span>.
+    </div>
+  </div>
+
+  <!-- Flow: Upload → Claude → Brief -->
+  <div style="position:absolute; left: 120px; right: 120px; top: 440px; display: grid; grid-template-columns: 1.1fr 80px 1.3fr 80px 1.6fr; align-items: stretch; gap: 0;">
+
+    <!-- Upload -->
+    <div style="padding: 28px; border: 1px solid var(--rule); border-radius: 14px; background: rgba(255,255,255,0.025);">
+      <div style="font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 16px;">01 · Upload</div>
+      <div style="display:grid; gap: 10px;">
+        <div style="padding: 12px 14px; border-radius: 8px; background: rgba(255,255,255,0.04); font-size: 18px; display:flex; align-items:center; gap: 12px;"><span style="width:8px;height:8px;border-radius:999px;background:var(--accent)"></span>Miro board — heatmap.pdf</div>
+        <div style="padding: 12px 14px; border-radius: 8px; background: rgba(255,255,255,0.04); font-size: 18px; display:flex; align-items:center; gap: 12px;"><span style="width:8px;height:8px;border-radius:999px;background:var(--accent)"></span>Hotjar — anz-pricing.csv</div>
+        <div style="padding: 12px 14px; border-radius: 8px; background: rgba(255,255,255,0.04); font-size: 18px; display:flex; align-items:center; gap: 12px;"><span style="width:8px;height:8px;border-radius:999px;background:var(--accent)"></span>Interview notes Q1.pdf</div>
+      </div>
+    </div>
+
+    <!-- arrow -->
+    <div style="display:flex; align-items: center; justify-content: center;"><svg width="60" height="24" viewBox="0 0 60 24" fill="none"><path d="M0 12 L54 12 M48 6 L54 12 L48 18" stroke="#b285ea" stroke-width="2"/></svg></div>
+
+    <!-- Claude analysis -->
+    <div style="padding: 28px; border: 1px solid rgba(178,133,234,0.4); border-radius: 14px; background: linear-gradient(135deg, rgba(178,133,234,0.08) 0%, rgba(178,133,234,0.02) 100%);">
+      <div style="font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px;">02 · Claude analysis</div>
+      <div style="font-family: ui-monospace, Menlo, monospace; font-size: 15px; line-height: 1.55; color: var(--ink-2); background: rgba(0,0,0,0.35); padding: 18px; border-radius: 8px; border: 1px solid var(--rule);">
+        <div style="color: var(--accent);">› analysing 3 sources…</div>
+        <div style="color: var(--ink-3);">  extracted 42 observations</div>
+        <div style="color: var(--ink-3);">  clustered into 6 themes</div>
+        <div style="color: var(--accent);">› drafting briefs…</div>
+        <div style="color: var(--ink);">  ▍ writing hypothesis<span class="cursor"></span></div>
+      </div>
+    </div>
+
+    <!-- arrow -->
+    <div style="display:flex; align-items: center; justify-content: center;"><svg width="60" height="24" viewBox="0 0 60 24" fill="none"><path d="M0 12 L54 12 M48 6 L54 12 L48 18" stroke="#b285ea" stroke-width="2"/></svg></div>
+
+    <!-- Brief output -->
+    <div style="padding: 28px; border: 1px solid var(--rule); border-radius: 14px; background: rgba(255,255,255,0.025);">
+      <div style="font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 16px;">03 · Experiment brief</div>
+      <div style="display:grid; gap: 12px;">
+        <div><div style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-4); margin-bottom: 4px;">Observation</div><div style="font-size: 17px; line-height: 1.35;">Pricing page bounces 4× higher on /anz than /uk.</div></div>
+        <div><div style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-4); margin-bottom: 4px;">How might we</div><div style="font-size: 17px; line-height: 1.35;">Reduce cognitive load on plan comparison.</div></div>
+        <div><div style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 4px;">Hypothesis</div><div style="font-size: 17px; line-height: 1.35; color: var(--ink);">If we lead with the modular bundle, MQL rate will lift.</div></div>
+        <div><div style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-4); margin-bottom: 4px;">Test direction</div><div style="font-size: 17px; line-height: 1.35;">Hero stack → bundle-first; 3-tier collapse.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- callout -->
+  <div style="position:absolute; left: 120px; right: 120px; bottom: 140px; font-size: 28px; font-weight: 400; color: var(--ink-2); max-width: 1400px; line-height: 1.35;">
+    <span style="color: var(--accent); font-weight: 500;">“</span>The hypothesis that goes live is the same one born from the research. <span style="color: var(--ink);">No dilution.</span><span style="color: var(--accent); font-weight: 500;">”</span>
+  </div>
+
+  <div class="chrome bot">
+    <span class="eh-mark"><span class="glyph"></span><span class="wm">employment hero</span></span>
+    <span class="opti-mark"><span class="dot"></span>Optimizely</span>
+  </div>
+</section>
+
+<!-- ────────────────────────────────────────────────────────────────
+     SLIDE 12 · Three agents
+     ──────────────────────────────────────────────────────────────── -->
+<section data-label="Three agents" style="background: #0B0B14;">
+  <div class="chrome top">
+    <span class="mono">11 &nbsp;·&nbsp; AGENTS</span>
+    <span class="mono">12 / 18</span>
+  </div>
+
+  <div style="position:absolute; left: 120px; right: 120px; top: 150px;">
+    <div class="kicker anim-kicker" style="margin-bottom: 14px;">The execution layer</div>
+    <div class="display anim-headline" style="font-size: 72px; letter-spacing: -0.02em;">Three agents. One&nbsp;brief.</div>
+  </div>
+
+  <!-- 3 columns -->
+  <div style="position:absolute; left: 120px; right: 120px; top: 360px; bottom: 200px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 28px;">
+
+    <!-- Designer -->
+    <div style="padding: 36px; border: 1px solid var(--rule); border-radius: 16px; background: linear-gradient(180deg, rgba(178,133,234,0.08) 0%, rgba(255,255,255,0.02) 40%); display:flex; flex-direction:column;">
+      <div style="display:flex; align-items: center; gap: 14px; margin-bottom: 20px;">
+        <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(178,133,234,0.2); border: 1px solid rgba(178,133,234,0.4); display:flex; align-items:center; justify-content:center;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#b285ea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+        </div>
+        <div>
+          <div style="font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent);">Agent 01</div>
+          <div style="font-size: 32px; font-weight: 500; letter-spacing: -0.01em;">Designer</div>
+        </div>
+      </div>
+      <div style="font-size: 20px; line-height: 1.4; color: var(--ink-2); margin-bottom: 22px;">On-spec mockups from brand tokens &amp; a block inventory. Figma-ready for human review.</div>
+      <div style="margin-top: auto; display:grid; gap: 10px; font-size: 16px; color: var(--ink-3);">
+        <div>— Variant toggle preview</div>
+        <div>— Token-validated output</div>
+        <div>— Creative direction stays human</div>
+      </div>
+    </div>
+
+    <!-- Copywriter -->
+    <div style="padding: 36px; border: 1px solid var(--rule); border-radius: 16px; background: linear-gradient(180deg, rgba(178,133,234,0.08) 0%, rgba(255,255,255,0.02) 40%); display:flex; flex-direction:column;">
+      <div style="display:flex; align-items: center; gap: 14px; margin-bottom: 20px;">
+        <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(178,133,234,0.2); border: 1px solid rgba(178,133,234,0.4); display:flex; align-items:center; justify-content:center;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#b285ea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <div>
+          <div style="font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent);">Agent 02</div>
+          <div style="font-size: 32px; font-weight: 500; letter-spacing: -0.01em;">Copywriter</div>
+        </div>
+      </div>
+      <div style="font-size: 20px; line-height: 1.4; color: var(--ink-2); margin-bottom: 22px;">Three copy variations per content block, each with a distinct psychological angle.</div>
+      <div style="margin-top: auto; display:grid; gap: 10px; font-size: 16px; color: var(--ink-3);">
+        <div>— Angles tagged &amp; testable</div>
+        <div>— Voice guardrails baked in</div>
+        <div>— Brand originality stays human</div>
+      </div>
+    </div>
+
+    <!-- Developer -->
+    <div style="padding: 36px; border: 1px solid rgba(254,122,89,0.3); border-radius: 16px; background: linear-gradient(180deg, rgba(254,122,89,0.07) 0%, rgba(255,255,255,0.02) 40%); display:flex; flex-direction:column;">
+      <div style="display:flex; align-items: center; gap: 14px; margin-bottom: 20px;">
+        <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(254,122,89,0.18); border: 1px solid rgba(254,122,89,0.4); display:flex; align-items:center; justify-content:center;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fe7a59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <div>
+          <div style="font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: #fe7a59;">Agent 03</div>
+          <div style="font-size: 32px; font-weight: 500; letter-spacing: -0.01em;">Developer</div>
+        </div>
+      </div>
+      <div style="font-size: 20px; line-height: 1.4; color: var(--ink-2); margin-bottom: 22px;">Claude Code ships variation code into Optimizely via API, including custom event tracking.</div>
+      <div style="margin-top: auto; display:grid; gap: 10px; font-size: 16px; color: var(--ink-3);">
+        <div>— Claude Code → Optimizely API</div>
+        <div>— Custom event tracking auto-set</div>
+        <div>— 30 days → minutes</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- footer callout -->
+  <div style="position:absolute; left: 120px; right: 120px; bottom: 140px; display:flex; align-items: center; justify-content: space-between;">
+    <div style="display:flex; align-items: center; gap: 20px;">
+      <div style="width: 8px; height: 8px; border-radius: 999px; background: var(--accent); box-shadow: 0 0 16px var(--accent);"></div>
+      <div style="font-size: 28px; font-weight: 500; letter-spacing: -0.005em;">Humans direct. <span style="color: var(--ink-3); font-weight: 300;">Agents execute.</span></div>
+    </div>
+    <div style="font-size: 18px; color: var(--ink-4); letter-spacing: 0.06em; text-transform: uppercase;">Oversight at every handoff</div>
+  </div>
+
+  <div class="chrome bot">
+    <span class="eh-mark"><span class="glyph"></span><span class="wm">employment hero</span></span>
+    <span class="opti-mark"><span class="dot"></span>Optimizely</span>
+  </div>
+</section>
+
+<!-- ────────────────────────────────────────────────────────────────
+     SLIDE 13 · Optimizely integration
+     ──────────────────────────────────────────────────────────────── -->
+<section data-label="Optimizely integration" style="background: #0B0B14;">
+  <div class="chrome top">
+    <span class="mono">12 &nbsp;·&nbsp; OPTIMIZELY INTEGRATION</span>
+    <span class="mono">13 / 18</span>
+  </div>
+
+  <div style="position:absolute; left: 120px; right: 120px; top: 150px;">
+    <div style="display:flex; align-items: center; gap: 20px; margin-bottom: 16px;">
+      <div class="kicker anim-kicker" style="color: var(--ink-3);">With</div>
+      <div class="opti-mark" style="font-size: 28px;"><span class="dot" style="width: 22px; height: 22px;"></span>Optimizely</div>
+    </div>
+    <div class="display anim-headline" style="font-size: 72px; letter-spacing: -0.02em; max-width: 1600px;">
+      From variation code to live test — <span style="color: var(--accent);">without a sprint queue</span>.
+    </div>
+  </div>
+
+  <!-- 6-step flow -->
+  <div style="position:absolute; left: 120px; right: 120px; top: 420px;">
+    <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px;">
+      <!-- step template -->
+      <div style="padding: 22px; border: 1px solid var(--rule); border-radius: 14px; background: rgba(255,255,255,0.02); position: relative;">
+        <div style="font-family: 'Saiga', serif; font-size: 52px; color: var(--accent); font-weight: 300; line-height: 1; margin-bottom: 12px;">01</div>
+        <div style="font-size: 20px; font-weight: 500; line-height: 1.2; margin-bottom: 10px;">Claude Code writes</div>
+        <div style="font-size: 15px; color: var(--ink-3); line-height: 1.4;">Variation code configured to Optimizely's SDK architecture.</div>
+      </div>
+      <div style="padding: 22px; border: 1px solid var(--rule); border-radius: 14px; background: rgba(255,255,255,0.02);">
+        <div style="font-family: 'Saiga', serif; font-size: 52px; color: var(--accent); font-weight: 300; line-height: 1; margin-bottom: 12px;">02</div>
+        <div style="font-size: 20px; font-weight: 500; line-height: 1.2; margin-bottom: 10px;">Pushed via API</div>
+        <div style="font-size: 15px; color: var(--ink-3); line-height: 1.4;">No ticket, no sprint — straight into the Optimizely workspace.</div>
+      </div>
+      <div style="padding: 22px; border: 1px solid rgba(178,133,234,0.4); border-radius: 14px; background: linear-gradient(180deg, rgba(178,133,234,0.10), rgba(178,133,234,0.02));">
+        <div style="font-family: 'Saiga', serif; font-size: 52px; color: var(--accent); font-weight: 300; line-height: 1; margin-bottom: 12px;">03</div>
+        <div style="font-size: 20px; font-weight: 500; line-height: 1.2; margin-bottom: 10px;">Tracking wired</div>
+        <div style="font-size: 15px; color: var(--ink-3); line-height: 1.4;">Standard metrics, or a new custom event API — generated to spec.</div>
+      </div>
+      <div style="padding: 22px; border: 1px solid var(--rule); border-radius: 14px; background: rgba(255,255,255,0.02);">
+        <div style="font-family: 'Saiga', serif; font-size: 52px; color: var(--accent); font-weight: 300; line-height: 1; margin-bottom: 12px;">04</div>
+        <div style="font-size: 20px; font-weight: 500; line-height: 1.2; margin-bottom: 10px;">Test goes live</div>
+        <div style="font-size: 15px; color: var(--ink-3); line-height: 1.4;">QA'd by a human. Audience rules applied. In&nbsp;market.</div>
+      </div>
+      <div style="padding: 22px; border: 1px solid var(--rule); border-radius: 14px; background: rgba(255,255,255,0.02);">
+        <div style="font-family: 'Saiga', serif; font-size: 52px; color: var(--accent); font-weight: 300; line-height: 1; margin-bottom: 12px;">05</div>
+        <div style="font-size: 20px; font-weight: 500; line-height: 1.2; margin-bottom: 10px;">Slack pings</div>
+        <div style="font-size: 15px; color: var(--ink-3); line-height: 1.4;">Market channel (ANZ · UK · CA) notified automatically.</div>
+      </div>
+      <div style="padding: 22px; border: 1px solid var(--rule); border-radius: 14px; background: rgba(255,255,255,0.02);">
+        <div style="font-family: 'Saiga', serif; font-size: 52px; color: var(--accent); font-weight: 300; line-height: 1; margin-bottom: 12px;">06</div>
+        <div style="font-size: 20px; font-weight: 500; line-height: 1.2; margin-bottom: 10px;">Weekly Pulse</div>
+        <div style="font-size: 15px; color: var(--ink-3); line-height: 1.4;">Live results pulled into a structured update — no deck required.</div>
+      </div>
+    </div>
+
+    <!-- connecting rail -->
+    <div style="position:relative; height: 2px; background: linear-gradient(90deg, transparent 0%, rgba(178,133,234,0.5) 10%, rgba(178,133,234,0.5) 90%, transparent 100%); margin-top: -170px; z-index: -1;"></div>
+  </div>
+
+  <!-- headline stat -->
+  <div style="position:absolute; left: 120px; right: 120px; bottom: 130px; display:flex; align-items: baseline; justify-content: space-between;">
+    <div style="max-width: 1100px;">
+      <div style="font-size: 24px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 12px;">Time-to-live, before &amp; after</div>
+      <div class="display anim-headline" style="font-size: 80px; letter-spacing: -0.025em; line-height: 1;">
+        <span style="color: var(--ink-3); text-decoration: line-through; text-decoration-color: rgba(255,255,255,0.2); text-decoration-thickness: 3px;">30+ days</span>
+        &nbsp;→&nbsp;
+        <span style="color: var(--accent);">minutes.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="chrome bot">
+    <span class="eh-mark"><span class="glyph"></span><span class="wm">employment hero</span></span>
+    <span class="opti-mark"><span class="dot"></span>Optimizely</span>
+  </div>
+</section>
+
+<!-- ────────────────────────────────────────────────────────────────
+     SLIDE 14 · Velocity chart (hero data slide)
+     ──────────────────────────────────────────────────────────────── -->
+<section data-label="Velocity" style="background: #0B0B14;">
+  <div class="chrome top">
+    <span class="mono">13 &nbsp;·&nbsp; VELOCITY</span>
+    <span class="mono">14 / 18</span>
+  </div>
+
+  <div style="position:absolute; left: 120px; top: 150px;">
+    <div class="kicker anim-kicker" style="margin-bottom: 14px;">Tests launched, monthly</div>
+    <div class="display anim-headline" style="font-size: 76px; letter-spacing: -0.02em;">The velocity curve.</div>
+  </div>
+
+  <!-- CHART -->
+  <svg viewBox="0 0 1680 620" style="position:absolute; left: 120px; top: 340px; width: 1680px; height: 620px;">
+    <defs>
+      <linearGradient id="areaFill" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0%" stop-color="#9C5CE3" stop-opacity="0.55"/>
+        <stop offset="100%" stop-color="#9C5CE3" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+
+    <!-- grid -->
+    <g stroke="rgba(255,255,255,0.06)" stroke-width="1">
+      <line x1="60" y1="540" x2="1640" y2="540"/>
+      <line x1="60" y1="430" x2="1640" y2="430"/>
+      <line x1="60" y1="320" x2="1640" y2="320"/>
+      <line x1="60" y1="210" x2="1640" y2="210"/>
+      <line x1="60" y1="100" x2="1640" y2="100"/>
+    </g>
+
+    <!-- y-axis labels -->
+    <g fill="rgba(255,255,255,0.45)" font-family="BeVietnamPro" font-size="16">
+      <text x="30" y="545" text-anchor="end">0</text>
+      <text x="30" y="435" text-anchor="end">5</text>
+      <text x="30" y="325" text-anchor="end">10</text>
+      <text x="30" y="215" text-anchor="end">15</text>
+      <text x="30" y="105" text-anchor="end">20+</text>
+    </g>
+
+    <!-- Previous-annual-total dashed reference at y = ceiling (10–12 /yr) -->
+    <!-- Not shown as a bar, just a subtle note -->
+
+    <!-- BEFORE bars (muted) — Jan 2024 through Oct 2024 — ~1/month -->
+    <g fill="rgba(255,255,255,0.18)" class="vbar-group">
+      <!-- 12 months of before -->
+      <rect class="vbar" style="animation-delay: 0.05s" x="80"  y="518" width="60" height="22" rx="4"/>
+      <rect class="vbar" style="animation-delay: 0.10s" x="160" y="506" width="60" height="34" rx="4"/>
+      <rect class="vbar" style="animation-delay: 0.15s" x="240" y="518" width="60" height="22" rx="4"/>
+      <rect class="vbar" style="animation-delay: 0.20s" x="320" y="496" width="60" height="44" rx="4"/>
+      <rect class="vbar" style="animation-delay: 0.25s" x="400" y="518" width="60" height="22" rx="4"/>
+      <rect class="vbar" style="animation-delay: 0.30s" x="480" y="506" width="60" height="34" rx="4"/>
+      <rect class="vbar" style="animation-delay: 0.35s" x="560" y="484" width="60" height="56" rx="4"/>
+      <rect class="vbar" style="animation-delay: 0.40s" x="640" y="518" width="60" height="22" rx="4"/>
+      <rect class="vbar" style="animation-delay: 0.45s" x="720" y="506" width="60" height="34" rx="4"/>
+      <rect class="vbar" style="animation-delay: 0.50s" x="800" y="518" width="60" height="22" rx="4"/>
+    </g>
+
+    <!-- Inflection marker -->
+    <line x1="900" y1="60" x2="900" y2="540" stroke="rgba(178,133,234,0.4)" stroke-dasharray="4 4" stroke-width="1.5"/>
+
+    <!-- AFTER bars — Nov 2024 through Mar 2025 — ramp to 20+ -->
+    <g>
+      <rect class="vbar" style="animation-delay: 0.70s" x="880"  y="474" width="60" height="66"  rx="4" fill="url(#areaFill)" stroke="#9C5CE3" stroke-width="1.5"/>
+      <rect class="vbar" style="animation-delay: 0.82s" x="960"  y="408" width="60" height="132" rx="4" fill="url(#areaFill)" stroke="#9C5CE3" stroke-width="1.5"/>
+      <rect class="vbar" style="animation-delay: 0.94s" x="1040" y="342" width="60" height="198" rx="4" fill="url(#areaFill)" stroke="#9C5CE3" stroke-width="1.5"/>
+      <rect class="vbar" style="animation-delay: 1.06s" x="1120" y="276" width="60" height="264" rx="4" fill="url(#areaFill)" stroke="#9C5CE3" stroke-width="1.5"/>
+      <rect class="vbar" style="animation-delay: 1.18s" x="1200" y="210" width="60" height="330" rx="4" fill="url(#areaFill)" stroke="#9C5CE3" stroke-width="1.5"/>
+      <rect class="vbar" style="animation-delay: 1.30s" x="1280" y="166" width="60" height="374" rx="4" fill="url(#areaFill)" stroke="#b285ea" stroke-width="1.5"/>
+      <rect class="vbar" style="animation-delay: 1.42s" x="1360" y="122" width="60" height="418" rx="4" fill="url(#areaFill)" stroke="#b285ea" stroke-width="1.5"/>
+      <rect class="vbar" style="animation-delay: 1.54s" x="1440" y="100" width="60" height="440" rx="4" fill="#9C5CE3" stroke="#fff" stroke-width="1.5"/>
+    </g>
+
+    <!-- March callout -->
+    <g>
+      <circle cx="1470" cy="100" r="14" fill="none" stroke="#fff" stroke-width="1.5"/>
+      <circle cx="1470" cy="100" r="5" fill="#fff"/>
+    </g>
+
+    <!-- x-axis months -->
+    <g fill="rgba(255,255,255,0.5)" font-family="BeVietnamPro" font-size="14">
+      <text x="110" y="570" text-anchor="middle">Jan'24</text>
+      <text x="270" y="570" text-anchor="middle">Mar</text>
+      <text x="430" y="570" text-anchor="middle">May</text>
+      <text x="590" y="570" text-anchor="middle">Jul</text>
+      <text x="750" y="570" text-anchor="middle">Sep</text>
+      <text x="910" y="570" text-anchor="middle">Nov</text>
+      <text x="1070" y="570" text-anchor="middle">Jan'25</text>
+      <text x="1230" y="570" text-anchor="middle">Feb</text>
+      <text x="1470" y="570" text-anchor="middle" fill="#b285ea" font-weight="600">Mar</text>
+    </g>
+
+    <!-- annotations -->
+    <g font-family="BeVietnamPro" font-size="18" fill="#fff">
+      <!-- inflection label -->
+      <text x="908" y="90" font-size="14" letter-spacing="2" fill="rgba(178,133,234,0.8)">CONVERSION HUB LAUNCHED</text>
+      <!-- March peak -->
+      <g transform="translate(1500, 90)">
+        <text font-size="42" font-family="Saiga" font-weight="300" fill="#fff">20+</text>
+        <text y="34" font-size="16" fill="rgba(255,255,255,0.7)">tests in one month</text>
+      </g>
+      <!-- prior annual total -->
+      <g transform="translate(80, 440)">
+        <text font-size="14" letter-spacing="2" fill="rgba(255,255,255,0.4)">PREVIOUS ANNUAL TOTAL</text>
+        <text y="30" font-size="36" font-family="Saiga" font-weight="300" fill="rgba(255,255,255,0.7)">10–12 / yr</text>
+      </g>
+    </g>
+  </svg>
+
+  <div class="chrome bot">
+    <span class="eh-mark"><span class="glyph"></span><span class="wm">employment hero</span></span>
+    <span class="opti-mark"><span class="dot"></span>Optimizely</span>
+  </div>
+</section>
+
+<!-- ────────────────────────────────────────────────────────────────
+     SLIDE 15 · Global COE vision
+     ──────────────────────────────────────────────────────────────── -->
+<section data-label="Global Centre of Excellence" style="background: #0B0B14;">
+  <div class="chrome top">
+    <span class="mono">14 &nbsp;·&nbsp; WHAT'S NEXT</span>
+    <span class="mono">15 / 18</span>
+  </div>
+
+  <div style="position:absolute; left: 120px; top: 150px; max-width: 1200px;">
+    <div class="kicker anim-kicker" style="margin-bottom: 14px;">The vision</div>
+    <div class="display anim-headline" style="font-size: 72px; letter-spacing: -0.02em; line-height: 1.02;">
+      Conversion as a global standard, <span style="color: var(--accent);">not a central&nbsp;bottleneck</span>.
+    </div>
+  </div>
+
+  <!-- split layout: left principles, right map -->
+  <div style="position:absolute; left: 120px; top: 460px; right: 120px; bottom: 140px; display: grid; grid-template-columns: 1fr 1.1fr; gap: 80px; align-items: start;">
+
+    <div style="display:grid; gap: 28px;">
+      <div style="display:grid; grid-template-columns: 44px 1fr; gap: 20px; align-items: start;">
+        <div style="width: 44px; height: 44px; border-radius: 999px; background: rgba(178,133,234,0.15); border: 1px solid rgba(178,133,234,0.4); display:flex; align-items:center; justify-content:center; color: var(--accent); font-family: Saiga; font-size: 22px;">1</div>
+        <div><div style="font-size: 26px; font-weight: 500; margin-bottom: 6px;">A Learning Hub — not a gatekeeper.</div><div style="font-size: 18px; color: var(--ink-3); line-height: 1.4;">Training modules unlock platform access for market teams.</div></div>
+      </div>
+      <div style="display:grid; grid-template-columns: 44px 1fr; gap: 20px; align-items: start;">
+        <div style="width: 44px; height: 44px; border-radius: 999px; background: rgba(178,133,234,0.15); border: 1px solid rgba(178,133,234,0.4); display:flex; align-items:center; justify-content:center; color: var(--accent); font-family: Saiga; font-size: 22px;">2</div>
+        <div><div style="font-size: 26px; font-weight: 500; margin-bottom: 6px;">Any market runs tests to ANZ standard.</div><div style="font-size: 18px; color: var(--ink-3); line-height: 1.4;">Same quality bar, same playbook, local execution.</div></div>
+      </div>
+      <div style="display:grid; grid-template-columns: 44px 1fr; gap: 20px; align-items: start;">
+        <div style="width: 44px; height: 44px; border-radius: 999px; background: rgba(178,133,234,0.15); border: 1px solid rgba(178,133,234,0.4); display:flex; align-items:center; justify-content:center; color: var(--accent); font-family: Saiga; font-size: 22px;">3</div>
+        <div><div style="font-size: 26px; font-weight: 500; margin-bottom: 6px;">Central team shifts to strategic direction.</div><div style="font-size: 18px; color: var(--ink-3); line-height: 1.4;">Out of execution, into portfolio &amp; experimentation&nbsp;science.</div></div>
+      </div>
+      <div style="display:grid; grid-template-columns: 44px 1fr; gap: 20px; align-items: start;">
+        <div style="width: 44px; height: 44px; border-radius: 999px; background: rgba(178,133,234,0.15); border: 1px solid rgba(178,133,234,0.4); display:flex; align-items:center; justify-content:center; color: var(--accent); font-family: Saiga; font-size: 22px;">4</div>
+        <div><div style="font-size: 26px; font-weight: 500; margin-bottom: 6px;">Local experiments, global goals.</div><div style="font-size: 18px; color: var(--ink-3); line-height: 1.4;">Aligned to product direction and company OKRs.</div></div>
+      </div>
+    </div>
+
+    <!-- Orbital map -->
+    <div style="position: relative; height: 520px;">
+      <svg viewBox="0 0 680 520" style="position:absolute; inset: 0; width: 100%; height: 100%;">
+        <defs>
+          <radialGradient id="coeGlow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#9C5CE3" stop-opacity="0.45"/><stop offset="100%" stop-color="#9C5CE3" stop-opacity="0"/></radialGradient>
+        </defs>
+        <circle cx="340" cy="260" r="230" fill="url(#coeGlow)"/>
+        <circle cx="340" cy="260" r="120" fill="none" stroke="rgba(178,133,234,0.35)" stroke-width="1" stroke-dasharray="3 3"/>
+        <circle cx="340" cy="260" r="200" fill="none" stroke="rgba(178,133,234,0.20)" stroke-width="1" stroke-dasharray="3 3"/>
+        <!-- connectors -->
+        <line x1="340" y1="260" x2="220" y2="380" stroke="rgba(178,133,234,0.45)" stroke-width="1"/>
+        <line x1="340" y1="260" x2="460" y2="130" stroke="rgba(178,133,234,0.45)" stroke-width="1"/>
+        <line x1="340" y1="260" x2="520" y2="360" stroke="rgba(178,133,234,0.45)" stroke-width="1"/>
+        <line x1="340" y1="260" x2="120" y2="220" stroke="rgba(178,133,234,0.25)" stroke-width="1" stroke-dasharray="3 3"/>
+      </svg>
+
+      <!-- hub -->
+      <div style="position:absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 160px; height: 160px; border-radius: 999px; background: linear-gradient(135deg, #9C5CE3, #7622d7); display:flex; flex-direction:column; align-items:center; justify-content:center; box-shadow: 0 0 80px rgba(156,92,227,0.55);">
+        <div style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.8);">Centre</div>
+        <div style="font-size: 22px; font-weight: 600; margin-top: 2px;">COE</div>
+      </div>
+
+      <!-- market nodes -->
+      <div style="position:absolute; left: 28%; top: 68%; transform: translate(-50%,-50%); padding: 14px 22px; border-radius: 999px; background: #15152a; border: 1px solid rgba(178,133,234,0.5); font-size: 18px; font-weight: 500;">ANZ</div>
+      <div style="position:absolute; left: 70%; top: 22%; transform: translate(-50%,-50%); padding: 14px 22px; border-radius: 999px; background: #15152a; border: 1px solid rgba(178,133,234,0.5); font-size: 18px; font-weight: 500;">UK</div>
+      <div style="position:absolute; left: 78%; top: 70%; transform: translate(-50%,-50%); padding: 14px 22px; border-radius: 999px; background: #15152a; border: 1px solid rgba(178,133,234,0.5); font-size: 18px; font-weight: 500;">Canada</div>
+      <div style="position:absolute; left: 17%; top: 40%; transform: translate(-50%,-50%); padding: 12px 20px; border-radius: 999px; background: transparent; border: 1px dashed rgba(178,133,234,0.4); font-size: 15px; color: var(--ink-3);">+ future markets</div>
+    </div>
+  </div>
+
+  <div class="chrome bot">
+    <span class="eh-mark"><span class="glyph"></span><span class="wm">employment hero</span></span>
+    <span class="opti-mark"><span class="dot"></span>Optimizely</span>
+  </div>
+</section>
+
+<!-- ────────────────────────────────────────────────────────────────
+     SLIDE 16 · Quality over slop
+     ──────────────────────────────────────────────────────────────── -->
+<section data-label="Quality over slop" style="background: #0B0B14;">
+  <div class="chrome top">
+    <span class="mono">15 &nbsp;·&nbsp; PHILOSOPHY</span>
+    <span class="mono">16 / 18</span>
+  </div>
+
+  <div style="position:absolute; left: 120px; right: 120px; top: 170px;">
+    <div class="kicker anim-kicker" style="margin-bottom: 14px;">A line in the sand</div>
+    <div class="display anim-headline" style="font-size: 92px; letter-spacing: -0.025em; line-height: 1.0; max-width: 1600px;">
+      AI-first doesn't mean human-last.
+    </div>
+  </div>
+
+  <div style="position:absolute; left: 120px; right: 120px; top: 450px; display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px;">
+    <div style="padding: 36px; border: 1px solid rgba(254,122,89,0.25); border-radius: 14px; background: rgba(254,122,89,0.04);">
+      <div style="font-size: 20px; letter-spacing: 0.16em; text-transform: uppercase; color: #fe7a59; margin-bottom: 20px;">Not this</div>
+      <div style="font-size: 30px; font-weight: 400; line-height: 1.25; color: var(--ink);">Faster, blander output.<br/><span style="color: var(--ink-3);">Optimising into mediocrity.</span></div>
+    </div>
+    <div style="padding: 36px; border: 1px solid rgba(178,133,234,0.3); border-radius: 14px; background: rgba(178,133,234,0.06);">
+      <div style="font-size: 20px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px;">This</div>
+      <div style="font-size: 30px; font-weight: 400; line-height: 1.25;">Creative direction<br/>stays <span style="color: var(--accent); font-weight: 500;">human</span>.</div>
+    </div>
+    <div style="padding: 36px; border: 1px solid rgba(178,133,234,0.3); border-radius: 14px; background: rgba(178,133,234,0.06);">
+      <div style="font-size: 20px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px;">And this</div>
+      <div style="font-size: 30px; font-weight: 400; line-height: 1.25;">Brand originality<br/>is <span style="color: var(--accent); font-weight: 500;">non-negotiable</span>.</div>
+    </div>
+  </div>
+
+  <!-- closing line -->
+  <div style="position:absolute; left: 120px; right: 120px; bottom: 150px;">
+    <div class="display anim-headline" style="font-size: 120px; line-height: 1; letter-spacing: -0.035em;">
+      Not faster slop.&nbsp;&nbsp;<span style="color: var(--accent);">Faster good.</span>
+    </div>
+  </div>
+
+  <div class="chrome bot">
+    <span class="eh-mark"><span class="glyph"></span><span class="wm">employment hero</span></span>
+    <span class="opti-mark"><span class="dot"></span>Optimizely</span>
+  </div>
+</section>
+
+<!-- ────────────────────────────────────────────────────────────────
+     SLIDE 17 · Business case
+     ──────────────────────────────────────────────────────────────── -->
+<section data-label="Business case" style="background: #0B0B14;">
+  <div class="chrome top">
+    <span class="mono">16 &nbsp;·&nbsp; COMMERCIAL CASE</span>
+    <span class="mono">17 / 18</span>
+  </div>
+
+  <div style="position:absolute; left: 120px; right: 120px; top: 150px;">
+    <div class="kicker anim-kicker" style="margin-bottom: 14px;">The numbers behind the build</div>
+    <div class="display anim-headline" style="font-size: 72px; letter-spacing: -0.02em;">
+      A team of two, built for&nbsp;ten.
+    </div>
+  </div>
+
+  <!-- table of metric cards -->
+  <div style="position:absolute; left: 120px; right: 120px; top: 410px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px;">
+    <div style="padding: 32px; border: 1px solid var(--rule); border-radius: 14px; background: rgba(255,255,255,0.025);">
+      <div style="font-size: 16px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px;">Team output</div>
+      <div class="display anim-headline" style="font-size: 76px; line-height: 1; letter-spacing: -0.02em;">2 <span style="color: var(--ink-3);">→</span> 10</div>
+      <div style="font-size: 20px; color: var(--ink-2); margin-top: 14px; line-height: 1.4;">Two practitioners producing the velocity of a ten-person team.</div>
+    </div>
+    <div style="padding: 32px; border: 1px solid var(--rule); border-radius: 14px; background: rgba(255,255,255,0.025);">
+      <div style="font-size: 16px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px;">Running cost</div>
+      <div class="display anim-headline" style="font-size: 76px; line-height: 1; letter-spacing: -0.02em;">$150<span style="color: var(--ink-2); font-size: 36px;">–</span>200</div>
+      <div style="font-size: 20px; color: var(--ink-2); margin-top: 14px; line-height: 1.4;">USD per month, all-in. SaaS-equivalent capability, in-house&nbsp;ownership.</div>
+    </div>
+    <div style="padding: 32px; border: 1px solid var(--rule); border-radius: 14px; background: rgba(255,255,255,0.025);">
+      <div style="font-size: 16px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px;">Time returned</div>
+      <div class="display anim-headline" style="font-size: 76px; line-height: 1; letter-spacing: -0.02em;">2<span style="color: var(--ink-2); font-size: 36px;">–</span>3 <span style="font-size: 36px; color: var(--ink-2);">hrs/wk</span></div>
+      <div style="font-size: 20px; color: var(--ink-2); margin-top: 14px; line-height: 1.4;">Reclaimed from admin alone — reinvested in strategy.</div>
+    </div>
+  </div>
+
+  <!-- bottom summary rail -->
+  <div style="position:absolute; left: 120px; right: 120px; bottom: 140px; display:flex; align-items: center; gap: 28px; padding: 24px 32px; border: 1px solid var(--rule); border-radius: 14px; background: rgba(178,133,234,0.05);">
+    <div style="width: 10px; height: 10px; border-radius: 999px; background: var(--accent); box-shadow: 0 0 14px var(--accent);"></div>
+    <div style="font-size: 26px; color: var(--ink-2); line-height: 1.35;">
+      No reliance on a global function to set up or run&nbsp;tests.
+      <span style="color: var(--ink); font-weight: 500;"> Ownership sits where the work&nbsp;happens.</span>
+    </div>
+  </div>
+
+  <div class="chrome bot">
+    <span class="eh-mark"><span class="glyph"></span><span class="wm">employment hero</span></span>
+    <span class="opti-mark"><span class="dot"></span>Optimizely</span>
+  </div>
+</section>
+
+<!-- ────────────────────────────────────────────────────────────────
+     SLIDE 18 · Close
+     ──────────────────────────────────────────────────────────────── -->
+<section data-label="Close" style="background: #0B0B14;">
+  <div class="orbit-bg" aria-hidden="true">
+    <div class="ring" style="width: 1800px; height: 1800px; left: 50%; top: 100%; transform: translate(-50%, -50%); border-color: rgba(178,133,234,0.10);"></div>
+    <div class="ring" style="width: 2400px; height: 2400px; left: 50%; top: 100%; transform: translate(-50%, -50%); border-color: rgba(178,133,234,0.05);"></div>
+    <div class="dot" style="width: 12px; height: 12px; left: calc(50% + 600px); top: 30%;"></div>
+    <div class="dot" style="width: 6px; height: 6px; left: calc(50% - 800px); top: 20%; background: #fff; opacity: 0.5;"></div>
+  </div>
+
+  <div class="chrome top">
+    <span class="mono">17 &nbsp;·&nbsp; CLOSE</span>
+    <span class="mono">18 / 18</span>
+  </div>
+
+  <div style="position:absolute; left: 120px; right: 120px; top: 180px;">
+    <div class="display anim-headline" style="font-size: 168px; line-height: 0.92; letter-spacing: -0.035em;">
+      <div>12 tests a&nbsp;year.</div>
+      <div style="color: var(--ink-3); margin-top: 12px;">20+ in a&nbsp;month.</div>
+      <div style="color: var(--accent); margin-top: 12px;">A team of&nbsp;two.</div>
+    </div>
+  </div>
+
+  <div style="position:absolute; left: 120px; right: 120px; bottom: 230px;">
+    <div style="font-size: 44px; font-weight: 300; line-height: 1.2; letter-spacing: -0.01em; max-width: 1400px;">
+      Don't hire your way out of a workflow problem.<br/>
+      <span style="color: var(--ink); font-weight: 500;">Build your way out of it.</span>
+    </div>
+  </div>
+
+  <!-- Footer with all brand marks -->
+  <div style="position:absolute; left: 120px; right: 120px; bottom: 80px; display:flex; align-items: center; justify-content: space-between; padding-top: 32px; border-top: 1px solid var(--rule);">
+    <div style="display:flex; align-items: center; gap: 56px;">
+      <span class="eh-mark"><span class="glyph"></span><span class="wm">employment hero</span></span>
+      <span class="opti-mark"><span class="dot"></span>Optimizely</span>
+    </div>
+    <div style="display:flex; align-items:center; gap: 24px; font-size: 20px; color: var(--ink-3);">
+      <div>Mick Baker · @mickbaker</div>
+      <span style="color: var(--ink-4);">·</span>
+      <div style="color: var(--ink-2);">CX Circle Sydney · 07 May 2026</div>
+    </div>
+  </div>
+</section>
+
+</deck-stage>
+
+<!-- Speaker notes — one per slide, in order -->
+<script type="application/json" id="speaker-notes">
+[
+  "G'day. I'm Mick Baker, Head of Conversion at Employment Hero. Over the next fifteen minutes I'm going to show you how a team of two went from shipping ten A/B tests in a whole year to more than twenty in a single month — by rebuilding our operating system around AI instead of bolting AI onto a broken one. This is a joint session with Optimizely; a lot of what I'll show you rides on top of their platform.",
+  "Before we start — a question. How many experiments is your team running right now? Not planned. Not sitting in a backlog waiting for a sprint. Actually live, in-market, reading data. Keep that number in your head. We'll come back to it.",
+  "Most teams I talk to are doing what I'll call AI-adjacent work. Faster drafts, a chatbot in a Slack channel, maybe summarised meeting notes — but the underlying workflow hasn't moved. The same six people still have to approve the same thing. That's very different from AI-first, which is what we've done at Employment Hero. We didn't speed up the workflow. We rebuilt it. AI is the execution layer now, not a helper.",
+  "Very quickly on who we are. Employment Hero is a global HR, payroll and benefits platform. We operate across ANZ — where we're headquartered — the UK, and Canada. Conversion, as a function, is brand new inside the business. Team of two. That context matters, because every decision I'm about to describe was made under real constraints, not abstract ambition.",
+  "Here's the problem we inherited. I call it test paralysis. It's that creeping feeling that the data you actually need to make a decision is always one more approval cycle away. Research. Brief. Design. Copy. Engineering. Eventually live — if nothing slips. Six weeks to learn one thing. By the time you learn it, the question's already changed.",
+  "And this was our ceiling. Ten to twelve A/B tests per year. That's not a headcount issue — two great practitioners can't out-run a queue. It's a system issue. The machine we were operating inside had a maximum throughput, and we had hit it.",
+  "Before I talk about the product we built, three things I had to accept. First — think like a product builder, not a service team. Stop taking tickets and start shipping your own thing. Second — scale the process before you grow the team. Hiring more people into a broken workflow just makes the breakage more expensive. And third — and this is the real one — the goal isn't faster tests. The goal is reclaiming strategic thinking. Velocity buys back the thing a conversion team never has: time to think.",
+  "This is what we built. We call it the Conversion Hub. One interface. One source of truth. AI as the execution layer, not a chat window in the corner. Everything I show you from here on out lives inside it.",
+  "This is what's connected underneath. Five layers. On the left — our inputs: Miro, Hotjar, documents. Up top — the intelligence: Claude and Claude Code. Below — the workflow: Asana, Sheets, Confluence. On the right — execution, led by Optimizely, with Figma actually on the way out. And distribution back to Slack and our live dashboard. The Hub sits in the middle. It's the only place a human touches.",
+  "This is the front door to it. The programme dashboard. Win rate, average lift, annualised MQLs, revenue impact — all live. I don't build reports anymore. If there's a bottleneck in the pipeline, it's visible in seconds, not assembled at the end of the quarter.",
+  "This is the research app. You point it at raw data — a Miro board, Hotjar exports, an interview PDF — and Claude produces an experiment-ready brief on the other side. Observation, how-might-we, hypothesis, test direction. The important bit is this: the hypothesis that actually goes live is the same one that came out of the research. No Chinese whispers. No dilution across four handoffs.",
+  "From the brief, three agents take over. A designer — mocks to spec against our brand tokens. A copywriter — three variations per block, each with a different psychological angle. A developer — Claude Code, writing variation code and pushing it straight into Optimizely. The agents execute. The humans direct. The creative call, the brand call, the strategic call — those stay with us.",
+  "The integration with Optimizely is the one I want to spend a moment on. Claude Code generates variation code configured for Optimizely's architecture. It pushes via the API. Tracking is wired — standard metrics or a custom event API, generated to spec. The test goes live, Slack gets notified on the right market channel, and our Weekly Pulse pulls the results into a structured update. What used to take thirty-plus days — getting into a dev sprint, getting tracking right, getting it live — now happens in minutes.",
+  "And this is the result. Through most of 2024, roughly a test a month. Flat. You can see where the Conversion Hub went live. The curve kicks. February, seventeen. March — twenty-plus tests in a single month. More tests in one month than we'd run in the entire prior year.",
+  "Where this is going. We want Conversion to be a global standard, not a central bottleneck. A learning hub that trains any market team on the platform. Any market can run experiments to the ANZ standard. The central team shifts from doing the work to setting the direction. Local execution. Global alignment.",
+  "One thing I want to be very clear about. AI-first does not mean human-last. The failure mode here is producing faster, blander output — optimising your way into mediocrity. Creative direction stays human. Brand originality stays human. We're not chasing faster slop. We're chasing faster good.",
+  "Quickly on the commercial case, because I know someone in the room is running the numbers. Team of two doing the work of roughly ten. Running cost is about a hundred and fifty to two hundred US dollars a month. Two to three hours a week back from admin alone. And critically — no reliance on a global function to stand up or run tests. Ownership sits where the work happens.",
+  "So. Twelve tests a year. Twenty-plus in a month. A team of two. If you take one thing away tonight — don't hire your way out of a workflow problem. Build your way out of it. Thanks very much."
+]
+</script>
+
+</body>
+</html>
