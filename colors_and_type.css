@@ -1,0 +1,385 @@
+/*
+ * Hero Design — Employment Hero's Design System
+ * Colors, type, spacing, radii, shadows.
+ * Source: hero-design monorepo (libs/colors, libs/react/src/theme).
+ */
+
+/* ───────── Fonts ───────── */
+@font-face {
+  font-family: 'BeVietnamPro';
+  src: url('fonts/BeVietnamPro-Light.ttf') format('truetype');
+  font-weight: 200 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'BeVietnamPro';
+  src: url('fonts/BeVietnamPro-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'BeVietnamPro';
+  src: url('fonts/BeVietnamPro-RegularItalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'BeVietnamPro';
+  src: url('fonts/BeVietnamPro-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'BeVietnamPro';
+  src: url('fonts/BeVietnamPro-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'BeVietnamPro';
+  src: url('fonts/BeVietnamPro-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Saiga';
+  src: url('fonts/Saiga-Light.otf') format('opentype');
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Saiga';
+  src: url('fonts/Saiga-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Saiga';
+  src: url('fonts/Saiga-Medium.otf') format('opentype');
+  font-weight: 600;
+  font-display: swap;
+}
+
+/* Hero icons — class="hero-icon-<name>" */
+@font-face {
+  font-family: 'hero-icons';
+  src: url('fonts/hero-icons.woff2') format('woff2'),
+    url('fonts/hero-icons.woff') format('woff'),
+    url('fonts/hero-icons.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+:root {
+  /* ───────── Palette (from @hero-design/colors defaultWebPalette) ───────── */
+  --hd-black: #000000;
+  --hd-white: #ffffff;
+
+  /* Violet — primary brand scale */
+  --hd-violet: #7622d7;
+  --hd-violet-dark-15: #5c1ba9;
+  --hd-violet-dark-30: #4a1588;
+  --hd-violet-light-30: #9c5ce3;
+  --hd-violet-light-45: #b285ea;
+  --hd-violet-light-60: #c9aef1;
+  --hd-violet-light-75: #dfd7f8;
+  --hd-violet-light-90: #f1ecfa;
+  --hd-violet-light-95: #f8f4fd;
+
+  /* Purple — lightPrimary (more playful, pairs with violet) */
+  --hd-purple: #be83cf;
+  --hd-purple-light-75: #efd9f3;
+  --hd-purple-light-90: #f7ecf9;
+
+  /* Grey — neutral scale */
+  --hd-grey: #a3a6ac;
+  --hd-grey-dark-60: #424447;
+  --hd-grey-dark-45: #5a5c61;
+  --hd-grey-dark-30: #727479;
+  --hd-grey-dark-15: #8a8d92;
+  --hd-grey-light-30: #b7b9be;
+  --hd-grey-light-45: #c7c9ce;
+  --hd-grey-light-60: #d7d9dd;
+  --hd-grey-light-75: #e7e8eb;
+  --hd-grey-light-85: #f0f1f3;
+  --hd-grey-light-90: #f4f5f6;
+  --hd-grey-light-95: #f9fafa;
+
+  /* Dodger Blue — info */
+  --hd-dodger: #4568fb;
+  --hd-dodger-dark-30: #2c45a8;
+  --hd-dodger-light-75: #c4cffd;
+  --hd-dodger-light-90: #e2e6fe;
+
+  /* Blue — info border / accent */
+  --hd-blue: #1dbeee;
+  --hd-blue-light-75: #b5e8f8;
+  --hd-blue-light-90: #d9f4fc;
+
+  /* Red (vermilion) — danger */
+  --hd-red: #de350b;
+  --hd-red-dark-15: #bf2d09;
+  --hd-red-dark-30: #9d2507;
+  --hd-red-light-75: #f4c2b2;
+  --hd-red-light-90: #fae0d8;
+
+  /* Orange (deepSaffron) — warning */
+  --hd-orange: #ffa234;
+  --hd-orange-dark-15: #d98a2c;
+  --hd-orange-dark-30: #b67224;
+  --hd-orange-light-75: #ffd9a6;
+  --hd-orange-light-90: #ffecd0;
+
+  /* Green — success */
+  --hd-green: #01b39c;
+  --hd-green-dark-15: #019784;
+  --hd-green-dark-30: #017a6b;
+  --hd-green-light-75: #b5e6df;
+
+  /* Grotesque green — success background (playful acid tone) */
+  --hd-grotesque-green: #6af293;
+  --hd-grotesque-green-light-60: #b3f9c6;
+  --hd-grotesque-green-light-90: #eafdef;
+
+  /* Pink — error (the hero pink) */
+  --hd-pink: #fe56aa;
+  --hd-pink-dark-15: #d8498f;
+  --hd-pink-light-75: #ffc9e2;
+  --hd-pink-light-90: #ffe4f0;
+
+  /* Smalt — deep navy for primary header backgrounds */
+  --hd-smalt: #003580;
+  --hd-smalt-light-75: #b3c2d9;
+  --hd-smalt-light-90: #d9e0ec;
+
+  /* Yellow — accent */
+  --hd-yellow: #fadb14;
+  --hd-yellow-light-75: #fdf0a1;
+  --hd-yellow-light-90: #fef8d0;
+
+  /* ───────── Semantic — Hero theme system palette ───────── */
+  --hd-primary: var(--hd-violet);
+  --hd-primary-hover: var(--hd-violet-light-30);
+  --hd-primary-active: var(--hd-violet-dark-30);
+  --hd-primary-bg: var(--hd-violet-light-75);
+  --hd-primary-bg-lite: var(--hd-violet-light-90);
+
+  --hd-info: var(--hd-dodger);
+  --hd-info-bg: var(--hd-dodger-light-90);
+
+  --hd-success: var(--hd-green);
+  --hd-success-bg: var(--hd-grotesque-green-light-90);
+
+  --hd-danger: var(--hd-red);
+  --hd-danger-bg: var(--hd-red-light-90);
+
+  --hd-warning: var(--hd-orange);
+  --hd-warning-bg: var(--hd-orange-light-90);
+
+  --hd-error: var(--hd-pink);
+  --hd-error-bg: var(--hd-pink-light-90);
+
+  --hd-link: var(--hd-violet);
+
+  /* Text roles */
+  --hd-text: #000000;              /* main */
+  --hd-text-body: var(--hd-grey-dark-45);
+  --hd-text-subdued: var(--hd-grey-dark-30);
+  --hd-text-disabled: var(--hd-grey);
+  --hd-text-light: var(--hd-white);
+
+  /* Surfaces */
+  --hd-bg: var(--hd-white);
+  --hd-bg-default: var(--hd-grey-light-90);   /* app grey surface */
+  --hd-bg-light: var(--hd-white);
+  --hd-bg-grey: var(--hd-grey-light-75);
+  --hd-bg-dark-grey: var(--hd-grey-light-45);
+  --hd-bg-neutral: var(--hd-grey);
+  --hd-bg-neutral-light: var(--hd-grey-light-60);
+
+  /* Borders */
+  --hd-border: var(--hd-grey-light-60);
+  --hd-border-light: var(--hd-grey-light-85);
+
+  /* AI gradient */
+  --hd-gradient-ai-horizontal: linear-gradient(90deg, #7622d7 0%, #bf2d09 25%, #7622d7 75%);
+  --hd-gradient-ai-diagonal: linear-gradient(282deg, #c4cffd 0%, #7622d7 29.31%, #bf2d09 99.3%);
+
+  /* ───────── Type ───────── */
+  --hd-font-sans: 'BeVietnamPro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --hd-font-display: 'Saiga', 'BeVietnamPro', Georgia, serif; /* Marketing/display */
+  --hd-font-icon: 'hero-icons';
+
+  /* Font weights */
+  --hd-fw-light: 200;
+  --hd-fw-regular: 400;
+  --hd-fw-medium: 500;
+  --hd-fw-semibold: 600;
+  --hd-fw-bold: 700;
+
+  /* Font sizes (base=10 IBM-derived scale) — align with fontSizes.* */
+  --hd-fs-xs: 10px;   /* xsmall   h9 */
+  --hd-fs-sm: 12px;   /* small    h8 */
+  --hd-fs-md: 14px;   /* medium   h7 body */
+  --hd-fs-lg: 16px;   /* large    h6 */
+  --hd-fs-xl: 18px;   /* xlarge   h5 */
+  --hd-fs-2xl: 20px;  /* xxlarge  h4 */
+  --hd-fs-3xl: 24px;  /* xxxlarge h3 */
+  --hd-fs-4xl: 28px;  /* xxxxlarge h2 */
+  --hd-fs-5xl: 32px;  /* xxxxxlarge h1 */
+  --hd-fs-6xl: 36px;
+  --hd-fs-7xl: 42px;
+  --hd-fs-8xl: 48px;
+
+  /* Line heights = size + 8 */
+  --hd-lh-xs: 18px;
+  --hd-lh-sm: 20px;
+  --hd-lh-md: 22px;
+  --hd-lh-lg: 24px;
+  --hd-lh-xl: 26px;
+  --hd-lh-2xl: 28px;
+  --hd-lh-3xl: 32px;
+  --hd-lh-4xl: 36px;
+  --hd-lh-5xl: 40px;
+
+  /* ───────── Spacing (base 8) ───────── */
+  --hd-space-xxs: 2px;
+  --hd-space-xs: 4px;
+  --hd-space-sm: 8px;
+  --hd-space-md: 16px;
+  --hd-space-lg: 24px;
+  --hd-space-xl: 32px;
+  --hd-space-2xl: 40px;
+  --hd-space-3xl: 48px;
+  --hd-space-4xl: 56px;
+
+  /* ───────── Radii ───────── */
+  --hd-r-xxxs: 4px;
+  --hd-r-xxs: 6px;
+  --hd-r-xs: 8px;
+  --hd-r-sm: 10px;
+  --hd-r-md: 12px;
+  --hd-r-lg: 16px;
+  --hd-r-xl: 20px;
+  --hd-r-2xl: 24px;
+  --hd-r-3xl: 32px;
+  --hd-r-pill: 999px;
+
+  /* ───────── Borders ───────── */
+  --hd-bw: 1px;
+
+  /* ───────── Elevation / shadows ───────── */
+  --hd-shadow-100: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 0 1px 0 rgba(0, 0, 0, 0.2);
+  --hd-shadow-200: 0 0 6px 0 rgba(0, 0, 0, 0.05), 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+  --hd-shadow-300: 0 -1px 3px 0 rgba(0, 0, 0, 0.05), 0 6px 16px 0 rgba(0, 0, 0, 0.1);
+  --hd-shadow-400: 0 -1px 5px 0 rgba(0, 0, 0, 0.05), 0 15px 20px 0 rgba(0, 0, 0, 0.1);
+  --hd-shadow-500: 0 -1px 5px 0 rgba(0, 0, 0, 0.05), 0 20px 40px 0 rgba(0, 0, 0, 0.15);
+  --hd-ring-primary: 0 0 0 2px var(--hd-primary-bg-lite);
+  --hd-ring-danger: 0 0 0 2px var(--hd-danger-bg);
+  --hd-ring-warning: 0 0 0 2px var(--hd-warning-bg);
+
+  /* ───────── Breakpoints (ref) ───────── */
+  /* xs 0 · sm 575 · md 768 · lg 992 · xl 1200 · xxl 1440 */
+}
+
+/* ───────── Semantic element styles ───────── */
+html, body {
+  font-family: var(--hd-font-sans);
+  font-weight: var(--hd-fw-regular);
+  color: var(--hd-text);
+  background: var(--hd-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'kern', 'liga';
+}
+
+h1, .hd-h1 {
+  font-size: var(--hd-fs-5xl);
+  line-height: var(--hd-lh-5xl);
+  font-weight: var(--hd-fw-semibold);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+h2, .hd-h2 {
+  font-size: var(--hd-fs-4xl);
+  line-height: var(--hd-lh-4xl);
+  font-weight: var(--hd-fw-semibold);
+  letter-spacing: -0.005em;
+  margin: 0;
+}
+h3, .hd-h3 {
+  font-size: var(--hd-fs-3xl);
+  line-height: var(--hd-lh-3xl);
+  font-weight: var(--hd-fw-semibold);
+  margin: 0;
+}
+h4, .hd-h4 {
+  font-size: var(--hd-fs-2xl);
+  line-height: var(--hd-lh-2xl);
+  font-weight: var(--hd-fw-semibold);
+  margin: 0;
+}
+h5, .hd-h5 {
+  font-size: var(--hd-fs-xl);
+  line-height: var(--hd-lh-xl);
+  font-weight: var(--hd-fw-semibold);
+  margin: 0;
+}
+
+p, .hd-body {
+  font-size: var(--hd-fs-md);
+  line-height: var(--hd-lh-md);
+  color: var(--hd-text-body);
+  margin: 0;
+}
+.hd-body-small {
+  font-size: var(--hd-fs-sm);
+  line-height: var(--hd-lh-sm);
+  color: var(--hd-text-body);
+}
+.hd-body-large {
+  font-size: var(--hd-fs-lg);
+  line-height: var(--hd-lh-lg);
+  color: var(--hd-text-body);
+}
+.hd-caption {
+  font-size: var(--hd-fs-xs);
+  line-height: var(--hd-lh-xs);
+  color: var(--hd-text-subdued);
+}
+.hd-display {
+  font-family: var(--hd-font-display);
+  font-weight: var(--hd-fw-light);
+  letter-spacing: -0.02em;
+}
+
+a, .hd-link {
+  color: var(--hd-link);
+  text-decoration: none;
+}
+a:hover, .hd-link:hover {
+  color: var(--hd-primary-hover);
+  text-decoration: underline;
+}
+
+code, pre, .hd-mono {
+  font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  font-size: 0.9em;
+}
+
+/* ───────── Icon class ───────── */
+[class^="hero-icon-"], [class*=" hero-icon-"] {
+  font-family: 'hero-icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+}
